@@ -29,3 +29,13 @@ Target Bedrock 1.26.52 / Script API 2.8.0. History: see git (inspection narrativ
 - Crop to flower after reload; bone meal on mature flower does nothing.
 - Fire and flowing lava next to a flower; water pop; two pistons in rapid succession.
 - Pick-block on the placed flower returns the vanilla item.
+
+## Bedrock 26.60 impact (2026-10-27, documented only)
+
+Source review against the 26.60 changelog and API 2.11.0 / 2.12.0-beta declarations; nothing tested in game.
+
+- Verdict: no change required. MCPE-240755 (`onBreak` now fires when a custom block with a filter component loses support) reaches the torchflower: `onBreak` in `main.js` now also runs on native support loss and calls the idempotent `flowerSupport.invalidate()`. Records are cleaned up sooner; piston jobs skip a popped flower, so no double drops. The support service is still needed (soil replaced by another valid soil).
+- Unaffected: `collision_box: false` and the format 1.21.120 block (the single-object `collision_box` rejection starts at format 1.26.60; whether `false` and `selection_box` stay valid there is unknown, re-check before any bump); loot table has no format_version or functions; no lighting change for custom `light_emission`.
+- Deferred: experimental `minecraft:neighbor_change` / `onNeighborChanged` (block format 1.26.60, beta API 2.12.0; 4,096 queued and 100 per tick per chunk) could detect flowing lava next to the flower (see TODO "revisit a supported native route") and part of the piston/support service. Wait for stable; note it in the TODO when it ships.
+- `liquid_detection` is still water only, so the flowing-lava item is unchanged. No crop-growth event in 2.11.0; the 100-tick crop poll stays.
+- Owner checks on 26.60: break the soil under a placed flower (exactly one drop, no content-log warning); two rapid piston pushes of the soil (one pop, one drop); piston replacing the soil with another valid soil pops the flower; light 14, water pop, crop-to-flower after reload.

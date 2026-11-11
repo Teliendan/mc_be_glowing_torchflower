@@ -24,7 +24,7 @@
       "evidence": [
         {
           "path": "docs/VANILLA_PARITY.md",
-          "sha256": "b3a2758b4ab44bad9944f5c5633cdfbb48f4e9ef55ef319374046bd5431fba36"
+          "sha256": "f39ffd067a76d1cd2a2e9ded468d2ab4edf353d98652cad822b855be9b123a7a"
         },
         {
           "path": "torchlight_bp/blocks/torchflower.json",
