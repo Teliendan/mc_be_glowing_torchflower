@@ -17,8 +17,8 @@ the glowing flower drops a normal torchflower.
 
 Built and tested against Bedrock 1.26.52 (Script API 2.8.0).
 
-Packs: `torchlight_bp/` + `torchlight_rp/`. Deploy with `.\mods deploy torchlight` and build an
-installable `.mcaddon` with `.\mods package torchlight`, both from the workspace root.
+Packs: `torchlight_bp/` + `torchlight_rp/`. Deploy with `.\mods deploy torchlight` from the workspace root.
+Download the add-on from the repo's GitHub Releases page, https://github.com/Teliendan/mc_be_torchlight/releases, or build it locally with `.\mods package torchlight` from the workspace root.
 Design, support rules and in-game checks: [docs/VANILLA_PARITY.md](docs/VANILLA_PARITY.md),
 [docs/SUPPORT_AND_PISTONS.md](docs/SUPPORT_AND_PISTONS.md). Tests: `.\mods verify torchlight`.
 
