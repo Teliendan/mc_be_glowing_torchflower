@@ -20,6 +20,10 @@
       "featureId": "torchlight:torchflower"
     },
     {
+      "pattern": "torchlight_bp/scripts/message_helper.js",
+      "featureId": "torchlight:torchflower"
+    },
+    {
       "pattern": "torchlight_bp/scripts/support.js",
       "featureId": "torchlight:torchflower"
     },
