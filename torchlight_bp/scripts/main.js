@@ -1,5 +1,5 @@
 import { message } from "./messages.js";
-import { world, system, BlockPermutation } from "@minecraft/server";
+import { world, system, BlockPermutation, BlockVolume } from "@minecraft/server";
 import { createTorchflowerSupport, observePiston } from "./support.js";
 
 // ---------------------------------------------------------------------------
@@ -181,25 +181,48 @@ function sweepAround(player, radius, height, label) {
     let growing = 0;
     const discoveredCrops = [];
 
+    // One filtered volume query per 16 x 16 column instead of one getBlock per
+    // cell; only the matching locations are read, and control returns to the
+    // game between columns. Y is clamped to the dimension's height range.
+    let minY = oy - height, maxY = oy + height;
+    try {
+        minY = Math.max(minY, dim.heightRange.min);
+        maxY = Math.min(maxY, dim.heightRange.max - 1);
+    } catch { /* keep the unclamped range; getBlocks failures are skipped below */ }
+    const filter = { includeTypes: [VANILLA_FLOWER, VANILLA_CROP] };
+
     system.runJob(function* () {
-        for (let dx = -radius; dx <= radius; dx++) {
-            for (let dz = -radius; dz <= radius; dz++) {
-                for (let dy = -height; dy <= height; dy++) {
-                    let block;
+        if (minY <= maxY) {
+            for (let x0 = ox - radius; x0 <= ox + radius; x0 += 16) {
+                const x1 = Math.min(x0 + 15, ox + radius);
+                for (let z0 = oz - radius; z0 <= oz + radius; z0 += 16) {
+                    const z1 = Math.min(z0 + 15, oz + radius);
+                    let hits = [];
                     try {
-                        block = dim.getBlock({ x: ox + dx, y: oy + dy, z: oz + dz });
+                        const found = dim.getBlocks(
+                            new BlockVolume({ x: x0, y: minY, z: z0 }, { x: x1, y: maxY, z: z1 }),
+                            filter, true);
+                        hits = [...found.getBlockLocationIterator()];
                     } catch {
-                        block = undefined;
+                        hits = [];  // unreadable column: skip it
                     }
-                    const type = block?.typeId;
-                    if (type === VANILLA_FLOWER) {
-                        makeGlowing(block);
-                        converted++;
-                    } else if (type === VANILLA_CROP) {
-                        growing++;
-                        discoveredCrops.push({ ...block.location });
+                    for (const loc of hits) {
+                        let block;
+                        try {
+                            block = dim.getBlock(loc);
+                        } catch {
+                            block = undefined;
+                        }
+                        const type = block?.typeId;
+                        if (type === VANILLA_FLOWER) {
+                            makeGlowing(block);
+                            converted++;
+                        } else if (type === VANILLA_CROP) {
+                            growing++;
+                            discoveredCrops.push({ ...block.location });
+                        }
                     }
-                    yield; // hand control back to the game each block
+                    yield; // hand control back to the game each column
                 }
             }
         }

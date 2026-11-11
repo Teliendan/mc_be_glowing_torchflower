@@ -12,7 +12,20 @@ async function harness(initial = []) {
     } }) });
     const fire = (name, event = {}) => { for (const fn of callbacks.get(name) || []) fn(event); };
     const key = p => `${p.x},${p.y},${p.z}`;
-    const dimension = { id: "overworld", getBlock: p => cells.get(key(p)) };
+    const volumeCalls = [];
+    const dimension = { id: "overworld", heightRange: { min: -64, max: 320 }, getBlock: p => cells.get(key(p)),
+        getBlocks(volume, filter, allowUnloaded) {
+            assert.equal(allowUnloaded, true, "sweep tolerates unloaded chunks");
+            const { from, to } = volume;
+            volumeCalls.push({ from, to, filter });
+            const lo = (a, b) => Math.min(a, b), hi = (a, b) => Math.max(a, b), locations = [];
+            for (const b of cells.values()) {
+                const l = b.location;
+                if (l.x >= lo(from.x, to.x) && l.x <= hi(from.x, to.x) && l.y >= lo(from.y, to.y) && l.y <= hi(from.y, to.y)
+                    && l.z >= lo(from.z, to.z) && l.z <= hi(from.z, to.z) && filter.includeTypes.includes(b.typeId)) locations.push({ ...l });
+            }
+            return { getBlockLocationIterator: () => locations[Symbol.iterator]() };
+        } };
     const world = { afterEvents: events, getDimension: () => dimension,
         getDynamicProperty(name) { assert.ok(ready,"world reads deferred until worldLoad"); return props.get(name); },
         setDynamicProperty(name,value) { writes++; props.set(name,value); } };
@@ -22,7 +35,8 @@ async function harness(initial = []) {
         clearRun: id => timers.delete(id) };
     globalThis.__cropLifecycle = { world, system, message: (...args) => args, observePiston() {},
         createTorchflowerSupport: () => ({ observe() {}, resetAround() {}, invalidate() {} }),
-        BlockPermutation: { resolve: typeId => ({ typeId }) } };
+        BlockPermutation: { resolve: typeId => ({ typeId }) },
+        BlockVolume: class { constructor(from, to) { this.from = from; this.to = to; } } };
     const source = readFileSync(new URL("../torchlight_bp/scripts/main.js", import.meta.url), "utf8")
         .replace(/^import \{([^}]+)\} from "[^"]+";/gm,"const {$1} = globalThis.__cropLifecycle;");
     await import(`data:text/javascript;base64,${Buffer.from(source).toString("base64")}#${serial++}`);
@@ -35,10 +49,10 @@ async function harness(initial = []) {
     };
     const messages = [];
     const player = {dimension, location:{x:0,y:0,z:0},sendMessage(m){messages.push(m);}};
-    return { timers, fire, put, props, cells, jobs, messages, player, get writes() { return writes; },
+    return { timers, fire, put, props, cells, jobs, volumeCalls, messages, player, get writes() { return writes; },
         sweep() { fire("scriptEventReceive",{id:"torchlight:sweep",sourceEntity:player}); },
         stepJob() { if(jobs[0]?.next().done) jobs.shift(); },
-        finishJob() { let steps=0; while(jobs.length) { assert.ok(++steps < 500000); this.stepJob(); } },
+        finishJob() { let steps=0; while(jobs.length) { assert.ok(++steps < 5000); this.stepJob(); } },
         check() { for (const {fn,ticks} of [...timers.values()]) { assert.equal(ticks,100); fn(); } } };
 }
 
@@ -83,6 +97,17 @@ console.log("PASS production crop timer: idle, deduplication, maturity, unloaded
     crop.typeId="minecraft:torchflower"; h.check();
     assert.equal(crop.typeId,"torchlight:torchflower"); assert.equal(h.timers.size,0);
     assert.equal(h.cells.get("1,0,0").typeId,"minecraft:wheat","other crops remain native and untracked");
+    const first=h.volumeCalls[0];
+    assert.deepEqual(first.filter,{includeTypes:["minecraft:torchflower","minecraft:torchflower_crop"]});
+    assert.ok(h.volumeCalls.every(c=>c.to.x-c.from.x<=15 && c.to.z-c.from.z<=15),"queries are at most 16 x 16 columns");
+    assert.ok(h.volumeCalls.every(c=>c.from.y>=-64 && c.to.y<=319),"Y is clamped to the dimension height range");
+}
+{
+    const h=await harness(); h.put(0,"minecraft:torchflower"); const far=h.put(500,"minecraft:torchflower");
+    h.sweep(); h.finishJob();
+    assert.equal(h.cells.get("0,0,0").typeId,"torchlight:torchflower","flower in range is converted");
+    assert.equal(far.typeId,"minecraft:torchflower","flower outside the sweep radius is untouched");
+    assert.ok(h.messages.some(m=>m[0]==="sweep.complete" && m[1]===1));
 }
 {
     const h=await harness(); h.put(0,"minecraft:torchflower_crop");
