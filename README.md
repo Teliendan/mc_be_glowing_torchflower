@@ -1,96 +1,26 @@
 # Glowing Torchflower
 
-A Minecraft Bedrock Edition Add-On that makes the torchflower emit light (level 14, torch-like),
-as if its bloom were an actual flame.
+Bedrock add-on that makes the torchflower emit light (level 14, like a torch), as if its bloom
+were an actual flame.
 
-Built and tested against game version **1.21.124**.
+Vanilla blocks are hardcoded and cannot be given light, so the placed flower is swapped for a
+visually identical custom block (`torchlight:torchflower`) that glows. Everything else stays
+vanilla: the item, dye, suspicious stew, sniffer drops and trading are untouched, and breaking
+the glowing flower drops a normal torchflower.
 
-## Why this exists
+- Placing a torchflower: it glows at once.
+- Planting torchflower seeds: the crop grows as normal and the mature flower glows.
+- Flowers already in the world: converted once, automatically, around you the first time you
+  spawn in with the add-on. Far-away flowers, or crops planted by farmers, are converted by
+  running `/scriptevent torchlight:sweep` nearby (radius 32 blocks, 16 up and down).
+- Flowers keep vanilla support rules: they pop when their soil is removed or moved.
 
-Vanilla blocks in Bedrock are hardcoded — you cannot add a `minecraft:light_emission` component
-to `minecraft:torchflower` directly ("Vanilla blocks are hardcoded. You may not override or access
-them." — [Bedrock Wiki](https://wiki.bedrock.dev/blocks/blocks-intro)).
+Built and tested against Bedrock 1.26.52 (Script API 2.8.0).
 
-The workaround: a visually identical **custom block** (`torchlight:torchflower`) that does emit
-light, reusing the real vanilla texture and a matching cross model. A script swaps the vanilla
-block for the glowing one on player placement or after registered crop maturity is detected.
-Light propagation is handled by the engine;
-scheduled block ticks and local piston events maintain the flower's support relationship.
-
-The **item** stays 100% vanilla. Dye, suspicious stew, sniffer drops, and trading are untouched;
-only the *placed block* changes, and breaking it drops a normal `minecraft:torchflower` item.
-
-## How it works
-
-| Torchflower source | Handling |
-|---|---|
-| Player places the flower item | `playerPlaceBlock` event → instant swap |
-| Player-planted crop matures | The crop's position is remembered on placement; a 5s timer re-checks only that handful of tracked positions until it matures |
-| Pre-existing or farmer-planted growing crops | Setup/manual sweep registers the crops; the same checker then converts them at maturity. Later plantings need another sweep |
-| Already in the world / world-gen, first load | One-time automatic migration on first player spawn (sweeps a volume around them once, then never again) |
-| Torchflowers far from where the migration ran | Manual `/scriptevent torchlight:sweep` run near them |
-| Flower pushed by a piston or its original soil moved | Pops and drops one vanilla torchflower, even if another soil replaces its support |
-
-No continuous world scanning happens at any point — see `torchlight_bp/scripts/main.js` for the
-full design rationale in comments.
-
-Support rules, production test status and regression instructions are in
-[the support notes](docs/SUPPORT_AND_PISTONS.md).
-
-## Install
-
-Copy both pack folders into your `com.mojang` folders (or package as `.mcaddon` — see below),
-then enable **Glowing Torchflower BP** for a world (it pulls in the RP automatically).
-
-```
-com.mojang/development_behavior_packs/torchlight_bp/
-com.mojang/development_resource_packs/torchlight_rp/
-```
-
-### Packaging for distribution
-
-```powershell
-# from the repo root
-Compress-Archive -Path torchlight_bp\*  -DestinationPath torchlight_bp.mcpack
-Compress-Archive -Path torchlight_rp\*  -DestinationPath torchlight_rp.mcpack
-```
-Or zip both folders together and rename to `.mcaddon` to install BP+RP in one double-click.
-
-## Development workflow
-
-This repo lives in the mods workspace (`mods/torchlight/`); Minecraft loads packs from
-`com.mojang/development_*`. From the workspace root:
-
-1. Edit files here.
-2. `.\mods deploy torchlight` verifies and copies both packs into the game's development
-   folders (or keep `.\mods watch` running to redeploy on every save).
-3. In Minecraft, leave and re-enter the world to reload.
-4. Commit here once it works (the post-commit hook redeploys).
-
-## Structure
-
-```
-torchlight_bp/
-  manifest.json
-  pack_icon.png
-  blocks/torchflower.json        # the glowing custom block (light_emission: 14)
-  loot_tables/blocks/torchflower.json
-  scripts/main.js                 # swap logic, migration, /scriptevent handler
-
-torchlight_rp/
-  manifest.json
-  pack_icon.png
-  blocks.json                     # block sound
-  models/blocks/torchflower.geo.json   # cross model
-  textures/terrain_texture.json   # maps textures/blocks/torchflower
-  textures/blocks/torchflower.png # copy of the vanilla 16x16 sprite
-  texts/en_US.lang
-```
-
-The RP bundles `textures/blocks/torchflower.png`, a copy of the vanilla 16x16 sprite made by
-`tools/make_torchflower_texture.py` (added after the add-on verifier flagged the atlas entry
-as having no PNG behind it). A pack-local copy does not follow a player's texture pack; delete
-it to fall back to resolving the vanilla path through the resource pack stack.
+Packs: `torchlight_bp/` + `torchlight_rp/`. Deploy with `.\mods deploy torchlight` and build an
+installable `.mcaddon` with `.\mods package torchlight`, both from the workspace root.
+Design, support rules and in-game checks: [docs/VANILLA_PARITY.md](docs/VANILLA_PARITY.md),
+[docs/SUPPORT_AND_PISTONS.md](docs/SUPPORT_AND_PISTONS.md). Tests: `.\mods verify torchlight`.
 
 ## Known limitations
 
