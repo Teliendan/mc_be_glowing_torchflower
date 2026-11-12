@@ -10,18 +10,18 @@ coarse dirt, podzol, rooted dirt (`dirt_with_roots`), moss, mud, farmland,
 mycelium and muddy mangrove roots (the last two corrected2026-10-21).
 Native destruction drops one vanilla torchflower. Placement and conversions
 warm support records immediately; sparse random ticks recover loaded flowers
-without world scans. Player edits reset local history; unavailable chunks and
+without world scans. Unavailable chunks and
 moving blocks remain unknown. The shared observer is
 `scripts/support_motion_service.js`, maintained with Lothlorien's matching
 script; `scripts/support.js` supplies the flower's support and loot rules.
 
 Offline regressions cover flower configuration, valid replacement, pre-event tick ordering, an unrelated nearby
-flower, duplicate piston jobs, native popping, edit history and reload recovery, plus a ten-soil check that rejects
+flower, duplicate piston jobs, native popping, random-tick soil conversion and reload recovery, plus a ten-soil check that rejects
 stone/sand. Run `.\mods verify torchlight` (includes `tests/run.mjs`). Pale moss is a target-version placement
 question; no guessed extra substrate was added.
 
-Design rule (owner, 2026-10-11): no looping per-block timers. Piston events discover cold flowers, edit/explosion
-events discover immediate neighbours, and native `onRandomTick` is an eventual fallback for commands, reloads and
+Design rule (owner, 2026-10-11): no looping per-block timers. Piston events discover cold flowers, soil removed by players,
+explosions or commands pops the flower natively (placement filter) and its `onBreak` forgets the record (TL-01, 2026-11-12: world-wide edit handlers removed), and native `onRandomTick` is an eventual fallback for commands, reloads and
 timeouts (no recovery at randomTickSpeed 0). Removing the old [2,2] timer removed the reported game lag.
 
 Not yet checked in game: rapid/concurrent pistons and chunk reloads. Reusable guidance: workspace

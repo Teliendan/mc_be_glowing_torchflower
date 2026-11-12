@@ -104,17 +104,17 @@ function makeGlowing(block) {
     flowerSupport.observe(block, { reset: true });
 }
 
-// 1) Player places a torchflower -> swap immediately.
+// 1) Player places a torchflower -> swap immediately. Soil loss is native (placement
+//    filter); the flower's own break, fire or explosion runs its onBreak.
 world.afterEvents.playerPlaceBlock.subscribe((e) => {
     const block = e.block;
-    flowerSupport.resetAround(block.dimension, block.location);
     if (block.typeId === VANILLA_FLOWER) {
         makeGlowing(block);
     } else if (block.typeId === VANILLA_CROP) {
         // Remember it so we can catch the moment it matures into a flower.
         trackCrop(block.location, block.dimension.id);
     }
-});
+}, { blockTypes: [VANILLA_FLOWER, VANILLA_CROP] });
 
 // 2) Slow timer: re-check ONLY the handful of tracked crop positions.
 //    This is not a world scan — it is a few getBlock calls every 5 seconds.
@@ -152,18 +152,7 @@ function checkPendingCrops() {
     syncCropTimer(keep);
 }
 
-// 3) Explicit player edits establish a new relationship at neighbouring flowers.
-//    Native survival and the support service own removal and loot.
-world.afterEvents.playerBreakBlock.subscribe((e) => {
-    flowerSupport.invalidate(e.dimension, e.block.location);
-    flowerSupport.resetAround(e.dimension, e.block.location);
-});
-world.afterEvents.blockExplode.subscribe((e) => {
-    flowerSupport.invalidate(e.dimension, e.block.location);
-    flowerSupport.resetAround(e.dimension, e.block.location);
-});
-
-// 4) Existing finite sweep also discovers growing crops, regardless of planter.
+// 3) Existing finite sweep also discovers growing crops, regardless of planter.
 //    Uses system.runJob and yields between reads so the engine can spread the
 //    finite volume walk across ticks.
 function sweepAround(player, radius, height, label) {
@@ -243,7 +232,7 @@ system.afterEvents.scriptEventReceive.subscribe((e) => {
     sweepAround(player, SWEEP_RADIUS, SWEEP_HEIGHT, "sweep");
 }, { namespaces: ["torchlight"] });
 
-// 5) First-run migration: convert torchflowers that already existed in the world
+// 4) First-run migration: convert torchflowers that already existed in the world
 //    before the mod was installed. Runs ONCE per world, then never again.
 world.afterEvents.playerSpawn.subscribe((e) => {
     if (!e.initialSpawn) return;

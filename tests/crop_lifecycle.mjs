@@ -3,10 +3,11 @@ import { readFileSync } from "node:fs";
 
 let serial = 0;
 async function harness(initial = []) {
-    const callbacks = new Map(), timers = new Map(), cells = new Map(), props = new Map(), jobs = [];
+    const callbacks = new Map(), subscribeOptions = new Map(), timers = new Map(), cells = new Map(), props = new Map(), jobs = [];
     props.set("torchlight:pending_crops", JSON.stringify(initial));
     let ready = false, writes = 0, nextTimer = 0;
-    const events = new Proxy({}, { get: (_, name) => ({ subscribe(fn) {
+    const events = new Proxy({}, { get: (_, name) => ({ subscribe(fn, options) {
+        subscribeOptions.set(name, options);
         if (!callbacks.has(name)) callbacks.set(name, []);
         callbacks.get(name).push(fn);
     } }) });
@@ -34,7 +35,7 @@ async function harness(initial = []) {
         runInterval(fn,ticks) { const id=++nextTimer; timers.set(id,{fn,ticks}); return id; },
         clearRun: id => timers.delete(id) };
     globalThis.__cropLifecycle = { world, system, message: (...args) => args, observePiston() {},
-        createTorchflowerSupport: () => ({ observe() {}, resetAround() {}, invalidate() {} }),
+        createTorchflowerSupport: () => ({ observe() {}, invalidate() {} }),
         BlockPermutation: { resolve: typeId => ({ typeId }) },
         BlockVolume: class { constructor(from, to) { this.from = from; this.to = to; } } };
     const source = readFileSync(new URL("../torchlight_bp/scripts/main.js", import.meta.url), "utf8")
@@ -49,7 +50,7 @@ async function harness(initial = []) {
     };
     const messages = [];
     const player = {dimension, location:{x:0,y:0,z:0},sendMessage(m){messages.push(m);}};
-    return { timers, fire, put, props, cells, jobs, volumeCalls, messages, player, get writes() { return writes; },
+    return { timers, fire, callbacks, subscribeOptions, put, props, cells, jobs, volumeCalls, messages, player, get writes() { return writes; },
         sweep() { fire("scriptEventReceive",{id:"torchlight:sweep",sourceEntity:player}); },
         stepJob() { if(jobs[0]?.next().done) jobs.shift(); },
         finishJob() { let steps=0; while(jobs.length) { assert.ok(++steps < 5000); this.stepJob(); } },
@@ -116,5 +117,11 @@ console.log("PASS production crop timer: idle, deduplication, maturity, unloaded
     assert.equal(h.timers.size,1,"one-time migration enrolls immature pre-existing crops");
     h.fire("playerSpawn",{initialSpawn:true,player:h.player}); assert.equal(h.jobs.length,0);
     h.put(0,"minecraft:torchflower"); h.check(); assert.equal(h.timers.size,0);
+}
+{
+    const h=await harness();
+    assert.equal(h.callbacks.has("playerBreakBlock"),false,"no world-wide break handler");
+    assert.equal(h.callbacks.has("blockExplode"),false,"no world-wide explosion handler");
+    assert.deepEqual(h.subscribeOptions.get("playerPlaceBlock"),{blockTypes:["minecraft:torchflower","minecraft:torchflower_crop"]});
 }
 console.log("PASS native crop discovery: manual/migration enrollment, deduplication and maturity");

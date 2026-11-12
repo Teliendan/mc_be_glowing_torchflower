@@ -86,11 +86,6 @@ test("a reloaded flower is discovered by the first piston, without warming", () 
     h.put(h.soil, "minecraft:dirt"); h.advance();
     assert.equal(h.drops.length, 1);
 });
-test("a cold flower loses invalid soil through an edit event", () => {
-    const h = harness(); h.put(h.soil, "minecraft:stone");
-    h.support.resetAround(h.dimension, h.soil);
-    assert.equal(h.drops.length, 1);
-});
 test("tick before piston event preserves original support history", () => {
     const h = harness(); h.observe();
     h.put(h.soil, "minecraft:grass_block"); h.observe(); h.event(); h.advance();
@@ -117,10 +112,10 @@ test("native popping and new placement invalidate old piston jobs", () => {
     h.advance(); assert.equal(h.drops.length, 0);
     assert.equal(h.dimension.getBlock(h.flower).typeId, FLOWER);
 });
-test("ordinary support edits do not leak old history into later pistons", () => {
+test("a soil conversion seen by the random tick does not leak old history into later pistons", () => {
     const h = harness(); h.observe();
-    h.put(h.soil, "minecraft:grass_block"); h.support.resetAround(h.dimension, h.soil);
-    h.event(); h.advance(); assert.equal(h.drops.length, 0);
+    h.put(h.soil, "minecraft:grass_block"); h.support.tick(h.dimension.getBlock(h.flower));
+    h.advance(5); h.event(); h.advance(); assert.equal(h.drops.length, 0);
 });
 test("sparse random-tick recovery checks actual soil eligibility", () => {
     const h = harness(); h.put(h.soil, "minecraft:stone"); h.observe();
