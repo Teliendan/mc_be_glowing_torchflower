@@ -24,5 +24,7 @@ Design rule (owner, 2026-10-11): no looping per-block timers. Piston events disc
 explosions or commands pops the flower natively (placement filter) and its `onBreak` forgets the record (TL-01, 2026-11-12: world-wide edit handlers removed), and native `onRandomTick` is an eventual fallback for commands, reloads and
 timeouts (no recovery at randomTickSpeed 0). Removing the old [2,2] timer removed the reported game lag.
 
+TL-01 verified in game (owner, 1.26.63, 2026-11-17): breaking the soil by hand or TNT beside the flower drops exactly one torchflower (T-1/T-2); a placed flower
+glows at once and a piston swapping the soil for another valid soil, or pulling it away, pops the flower once (T-3/T-4).
 Not yet checked in game: rapid/concurrent pistons and chunk reloads. Reusable guidance: workspace
 .claude/skills/bedrock-scripting/references/performance.md.

@@ -7,7 +7,7 @@ Target Bedrock 1.26.52 / Script API 2.8.0. History: see git (inspection narrativ
   `torchlight:torchflower` (light 14). Item, loot (one vanilla torchflower), dye, stew, compost and bee-feed routes stay vanilla by identity.
 - The growing `minecraft:torchflower_crop` stays fully native (growth, bone meal, trampling). Mature vanilla flowers do not
   reproduce with bone meal, so no handler is added (see VERIFIER_WARNINGS.md).
-- Player-planted crops are tracked by position (persisted) and re-checked every 20 ticks (1 s; 100 until 2026-11-17, owner saw a several-second delay) only while the list is non-empty.
+- Player-planted crops are tracked by position (persisted) and re-checked every 20 ticks (1 s; 100 until 2026-11-17, owner saw a several-second delay in game; the 1 s value is not re-tested yet) only while the list is non-empty.
   No world scanning. Setup sweep (once per world) and `/scriptevent torchlight:sweep` also enroll growing crops they find; one save at the end of the job.
 - Soils: ten documented soils in both the block `placement_filter` and `support.js` SOILS (includes mycelium, muddy mangrove roots).
 - Fire: catch 30 / destroy 100 (Bedrock one-block-flower row); no adjacent-lava ignition. Water pops it (WATER.md). Pistons and soil motion: SUPPORT_AND_PISTONS.md.
