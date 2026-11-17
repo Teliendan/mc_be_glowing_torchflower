@@ -34,7 +34,7 @@ world.afterEvents.pistonActivate.subscribe((event) => observePiston(flowerSuppor
 
 const CROPS_PROP     = "torchlight:pending_crops";  // persisted across reloads
 const MIGRATED_PROP  = "torchlight:migrated_v1";    // one-time first-run migration flag
-const CROP_CHECK_INTERVAL = 100;                    // ticks (5s)
+const CROP_CHECK_INTERVAL = 20;                     // ticks (1s); was 100, a mature flower lit up after up to 5 s
 let cropTimer;
 
 function syncCropTimer(list) {
@@ -117,7 +117,7 @@ world.afterEvents.playerPlaceBlock.subscribe((e) => {
 }, { blockTypes: [VANILLA_FLOWER, VANILLA_CROP] });
 
 // 2) Slow timer: re-check ONLY the handful of tracked crop positions.
-//    This is not a world scan — it is a few getBlock calls every 5 seconds.
+//    This is not a world scan — it is a few getBlock calls every second.
 function checkPendingCrops() {
     const list = loadPendingCrops();
     if (list.length === 0) { syncCropTimer(list); return; }

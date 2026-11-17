@@ -54,7 +54,7 @@ async function harness(initial = []) {
         sweep() { fire("scriptEventReceive",{id:"torchlight:sweep",sourceEntity:player}); },
         stepJob() { if(jobs[0]?.next().done) jobs.shift(); },
         finishJob() { let steps=0; while(jobs.length) { assert.ok(++steps < 5000); this.stepJob(); } },
-        check() { for (const {fn,ticks} of [...timers.values()]) { assert.equal(ticks,100); fn(); } } };
+        check() { for (const {fn,ticks} of [...timers.values()]) { assert.equal(ticks,20); fn(); } } };
 }
 
 {
