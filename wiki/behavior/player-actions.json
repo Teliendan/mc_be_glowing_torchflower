@@ -6,7 +6,7 @@
     "evidence": [
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "f39ffd067a76d1cd2a2e9ded468d2ab4edf353d98652cad822b855be9b123a7a"
+        "sha256": "b43847d44c74fc1a4034e216449743edd993cd4a974275a6bc71a223764c32b7"
       },
       {
         "path": "torchlight_bp/blocks/torchflower.json",
@@ -14,7 +14,7 @@
       },
       {
         "path": "torchlight_bp/scripts/main.js",
-        "sha256": "f9e8d54b5ec36c3470991956c8a6f03c4aa661af506e312e18b7aad721d6226c"
+        "sha256": "7a5a4fe022b2317ba6629b1bdafab1e1091eeeb8d4f1959d67c7195f726c662d"
       },
       {
         "path": "torchlight_bp/scripts/messages.js",
@@ -37,7 +37,7 @@
     "evidence": [
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "f39ffd067a76d1cd2a2e9ded468d2ab4edf353d98652cad822b855be9b123a7a"
+        "sha256": "b43847d44c74fc1a4034e216449743edd993cd4a974275a6bc71a223764c32b7"
       },
       {
         "path": "torchlight_bp/blocks/torchflower.json",
@@ -45,7 +45,7 @@
       },
       {
         "path": "torchlight_bp/scripts/main.js",
-        "sha256": "f9e8d54b5ec36c3470991956c8a6f03c4aa661af506e312e18b7aad721d6226c"
+        "sha256": "7a5a4fe022b2317ba6629b1bdafab1e1091eeeb8d4f1959d67c7195f726c662d"
       },
       {
         "path": "torchlight_bp/scripts/messages.js",
@@ -68,7 +68,7 @@
     "evidence": [
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "f39ffd067a76d1cd2a2e9ded468d2ab4edf353d98652cad822b855be9b123a7a"
+        "sha256": "b43847d44c74fc1a4034e216449743edd993cd4a974275a6bc71a223764c32b7"
       },
       {
         "path": "torchlight_bp/blocks/torchflower.json",
@@ -76,7 +76,7 @@
       },
       {
         "path": "torchlight_bp/scripts/main.js",
-        "sha256": "f9e8d54b5ec36c3470991956c8a6f03c4aa661af506e312e18b7aad721d6226c"
+        "sha256": "7a5a4fe022b2317ba6629b1bdafab1e1091eeeb8d4f1959d67c7195f726c662d"
       },
       {
         "path": "torchlight_bp/scripts/messages.js",
@@ -99,7 +99,7 @@
     "evidence": [
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "f39ffd067a76d1cd2a2e9ded468d2ab4edf353d98652cad822b855be9b123a7a"
+        "sha256": "b43847d44c74fc1a4034e216449743edd993cd4a974275a6bc71a223764c32b7"
       },
       {
         "path": "torchlight_bp/blocks/torchflower.json",
@@ -107,7 +107,7 @@
       },
       {
         "path": "torchlight_bp/scripts/main.js",
-        "sha256": "f9e8d54b5ec36c3470991956c8a6f03c4aa661af506e312e18b7aad721d6226c"
+        "sha256": "7a5a4fe022b2317ba6629b1bdafab1e1091eeeb8d4f1959d67c7195f726c662d"
       },
       {
         "path": "torchlight_bp/scripts/messages.js",
