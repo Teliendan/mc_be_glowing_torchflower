@@ -9,26 +9,31 @@ Target Bedrock 1.26.52 / Script API 2.8.0. History: see git (inspection narrativ
   reproduce with bone meal, so no handler is added (see VERIFIER_WARNINGS.md).
 - Player-planted crops are tracked by position (persisted) and re-checked every 20 ticks (1 s; 100 until 2026-11-17, owner saw a several-second delay in game; the 1 s value is not re-tested yet) only while the list is non-empty. Since 2026-11-21 each check reads at most 32 crops in rotation (owner decision, tablet budget): on a farm of <= 32 crops a grown crop still glows within ~1 s, on a bigger farm it may take N/32 seconds (e.g. 200 crops: up to ~7 s).
   No world scanning. Setup sweep (once per world) and `/scriptevent torchlight:sweep` also enroll growing crops they find; one save at the end of the job.
-- Soils: ten documented soils in both the block `placement_filter` and `support.js` SOILS (includes mycelium, muddy mangrove roots).
-- Fire: catch 30 / destroy 100 (Bedrock one-block-flower row); no adjacent-lava ignition. Water pops it (WATER.md). Pistons and soil motion: SUPPORT_AND_PISTONS.md.
+- Soils: eleven soils in both the block `placement_filter` and `support.js` SOILS (includes mycelium, muddy mangrove roots;
+  pale moss block added 2026-11-21 after the owner saw it hold vanilla flowers).
+- Fire: catch 30 / destroy 100 (Bedrock one-block-flower row). Water pops it (WATER.md). Pistons and soil motion: SUPPORT_AND_PISTONS.md.
 
 ## Owner decisions
 - 2026-10-21: restore the two missing soils, correct fire values, enroll sweep-found crops.
 - 2026-10-23: farmer-planted torchflowers stay unlit until a sweep runs nearby (README line); no new code.
 - 2026-10-23: rejected, a persistent farmland watcher (point checks on every farm to catch a rare cosmetic case; contradicts the no-polling goal).
 - 2026-10-23: rejected, the `minecraft:torchflower_seeds` legacy override and a player-only custom crop swap (global override, new crop content, loses exact vanilla growth). Probe pack removed.
+- 2026-11-21: pale moss block is a soil. The crop checker budget and the sweep job slicing ship without a game check.
+  Unlit farmer-planted and far-away flowers are revisited after the first release (TODO: an item that lights them).
 
 ## Known limits
 - Farmers can plant torchflower seeds only if a player gives or drops them; the mature flower then stays unlit until a sweep. Stable 2.8 has no crop-growth or villager-planting event.
 - Crops in chunks that never reload stay in the tracked list; the checker skips them with `isChunkLoaded` (no block read) and drops an entry only when its chunk is loaded and the block is no longer a growing crop.
 - Bees: the custom placed block is not recognised for nectar or tree nests (bee override deferred). Normal potting uses the vanilla item and leaves a native, unlit pot.
-- Fire spread and flowing-lava removal use documented values, not observed in game.
 
-## In-game checks still worth doing
-- Pale moss as soil: confirm vanilla placement before adding the ID.
-- Crop to flower after reload; bone meal on mature flower does nothing.
-- Fire and flowing lava next to a flower; water pop; two pistons in rapid succession.
-- Pick-block on the placed flower returns the vanilla item.
+## In-game results (owner, Bedrock 1.26.63, 2026-11-21)
+- Pistons, including rapid pushes: correct (one pop, one drop).
+- Lava burns the glowing flower.
+- Flint and steel on the flower: the flower disappears and a short-lived flame appears in the next block, the same as
+  vanilla flowers.
+- Pale moss block holds vanilla flowers, so it is now a torchflower soil (placement in game not re-checked after the change).
+- Earlier passes: crop to flower after reload, bone meal on a mature flower, water pop, pick-block
+  (`TEST_FEEDBACK_2026-10-25.md`).
 
 ## Bedrock 26.60 impact (2026-10-27, documented only)
 

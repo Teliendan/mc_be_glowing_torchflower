@@ -6,15 +6,15 @@
     "evidence": [
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "5820966b036721ff3b21c139ff40ca6ae30612fe05245149c7653820d9e53513"
+        "sha256": "eba75317464bd8c1949a0c88dc7aea6af2dc64c9d30b716dd51bc9fe055bd18e"
       },
       {
         "path": "torchlight_bp/blocks/torchflower.json",
-        "sha256": "592baf90a9d76340c671f982592c0b1b0b0aa4365c7fbf7fe7362a3cfe51da22"
+        "sha256": "38ace5f41f152d6d2a64614b92fb1dd9bff74b2e51c40804f4da1ec7b09d5d43"
       },
       {
         "path": "torchlight_bp/scripts/main.js",
-        "sha256": "7a5a4fe022b2317ba6629b1bdafab1e1091eeeb8d4f1959d67c7195f726c662d"
+        "sha256": "6ce52af08584b2a8179a4421888f4922156c61e4f17a8303c9fcdce4678275a6"
       },
       {
         "path": "torchlight_bp/scripts/messages.js",
@@ -22,7 +22,7 @@
       },
       {
         "path": "torchlight_bp/scripts/support.js",
-        "sha256": "29106361b043eb3342148404f835aa4efc83616c1b72c5a2b6a6418d3cff9b66"
+        "sha256": "27c266f7c2815917b8b5147950228d4f8a8c0caed92d8a0f7ce35752627e4be2"
       },
       {
         "path": "torchlight_bp/scripts/support_motion_service.js",
@@ -37,15 +37,15 @@
     "evidence": [
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "5820966b036721ff3b21c139ff40ca6ae30612fe05245149c7653820d9e53513"
+        "sha256": "eba75317464bd8c1949a0c88dc7aea6af2dc64c9d30b716dd51bc9fe055bd18e"
       },
       {
         "path": "torchlight_bp/blocks/torchflower.json",
-        "sha256": "592baf90a9d76340c671f982592c0b1b0b0aa4365c7fbf7fe7362a3cfe51da22"
+        "sha256": "38ace5f41f152d6d2a64614b92fb1dd9bff74b2e51c40804f4da1ec7b09d5d43"
       },
       {
         "path": "torchlight_bp/scripts/main.js",
-        "sha256": "7a5a4fe022b2317ba6629b1bdafab1e1091eeeb8d4f1959d67c7195f726c662d"
+        "sha256": "6ce52af08584b2a8179a4421888f4922156c61e4f17a8303c9fcdce4678275a6"
       },
       {
         "path": "torchlight_bp/scripts/messages.js",
@@ -53,7 +53,7 @@
       },
       {
         "path": "torchlight_bp/scripts/support.js",
-        "sha256": "29106361b043eb3342148404f835aa4efc83616c1b72c5a2b6a6418d3cff9b66"
+        "sha256": "27c266f7c2815917b8b5147950228d4f8a8c0caed92d8a0f7ce35752627e4be2"
       },
       {
         "path": "torchlight_bp/scripts/support_motion_service.js",
@@ -68,15 +68,15 @@
     "evidence": [
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "5820966b036721ff3b21c139ff40ca6ae30612fe05245149c7653820d9e53513"
+        "sha256": "eba75317464bd8c1949a0c88dc7aea6af2dc64c9d30b716dd51bc9fe055bd18e"
       },
       {
         "path": "torchlight_bp/blocks/torchflower.json",
-        "sha256": "592baf90a9d76340c671f982592c0b1b0b0aa4365c7fbf7fe7362a3cfe51da22"
+        "sha256": "38ace5f41f152d6d2a64614b92fb1dd9bff74b2e51c40804f4da1ec7b09d5d43"
       },
       {
         "path": "torchlight_bp/scripts/main.js",
-        "sha256": "7a5a4fe022b2317ba6629b1bdafab1e1091eeeb8d4f1959d67c7195f726c662d"
+        "sha256": "6ce52af08584b2a8179a4421888f4922156c61e4f17a8303c9fcdce4678275a6"
       },
       {
         "path": "torchlight_bp/scripts/messages.js",
@@ -84,7 +84,7 @@
       },
       {
         "path": "torchlight_bp/scripts/support.js",
-        "sha256": "29106361b043eb3342148404f835aa4efc83616c1b72c5a2b6a6418d3cff9b66"
+        "sha256": "27c266f7c2815917b8b5147950228d4f8a8c0caed92d8a0f7ce35752627e4be2"
       },
       {
         "path": "torchlight_bp/scripts/support_motion_service.js",
@@ -99,15 +99,15 @@
     "evidence": [
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "5820966b036721ff3b21c139ff40ca6ae30612fe05245149c7653820d9e53513"
+        "sha256": "eba75317464bd8c1949a0c88dc7aea6af2dc64c9d30b716dd51bc9fe055bd18e"
       },
       {
         "path": "torchlight_bp/blocks/torchflower.json",
-        "sha256": "592baf90a9d76340c671f982592c0b1b0b0aa4365c7fbf7fe7362a3cfe51da22"
+        "sha256": "38ace5f41f152d6d2a64614b92fb1dd9bff74b2e51c40804f4da1ec7b09d5d43"
       },
       {
         "path": "torchlight_bp/scripts/main.js",
-        "sha256": "7a5a4fe022b2317ba6629b1bdafab1e1091eeeb8d4f1959d67c7195f726c662d"
+        "sha256": "6ce52af08584b2a8179a4421888f4922156c61e4f17a8303c9fcdce4678275a6"
       },
       {
         "path": "torchlight_bp/scripts/messages.js",
@@ -115,7 +115,7 @@
       },
       {
         "path": "torchlight_bp/scripts/support.js",
-        "sha256": "29106361b043eb3342148404f835aa4efc83616c1b72c5a2b6a6418d3cff9b66"
+        "sha256": "27c266f7c2815917b8b5147950228d4f8a8c0caed92d8a0f7ce35752627e4be2"
       },
       {
         "path": "torchlight_bp/scripts/support_motion_service.js",

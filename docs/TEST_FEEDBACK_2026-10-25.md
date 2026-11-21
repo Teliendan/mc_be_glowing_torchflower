@@ -6,7 +6,7 @@ Bedrock 1.26.52; source: workspace `temp/testing_feedback.md`.
 | --- | --- |
 | T1 crop reload and mature bone meal | Owner PASS |
 | T2 water | Owner PASS: water pops the flower |
-| T2 lava | Owner reports lava ignores the flower; no pack change in this task |
+| T2 lava | Owner reports lava ignores the flower; no pack change in this task. Superseded 2026-11-21: lava burns it (`VANILLA_PARITY.md`) |
 | T2 fire / rapid pistons | Not individually described; retain focused checks |
 | T3 pick-block / soil | Owner PASS for the check; no explicit pale-moss comparison supplied |
 

@@ -1,19 +1,14 @@
 # Torchlight backlog
 
-## Pending targeted checks
+## Later (owner, 2026-11-21)
 
-- [ ] Compare a native torchflower and glowing flower with lava actually flowing
-  into their cells. Adjacent lava not igniting this flower is deliberate and
-  separate from flowing-lava removal. Owner reported lava ignored it on
-  2026-10-25, but the setup was not detailed.
-- [ ] Record fire consumption and two rapid piston operations separately; T2
-  feedback only described water and lava.
-- [ ] Explicitly record native pale-moss placement if a soil extension is wanted.
+- [ ] **Revisit unlit torchflowers.** Flowers far from the first-load setup area and flowers planted by
+  farmers stay unlit until `/scriptevent torchlight:sweep` runs nearby (`VANILLA_PARITY.md`, owner decision
+  2026-10-23). Idea: a player item that "turns them on" (lights the torchflowers around it), so players do not need
+  a command. Not for the first release.
 
-## Deferred
+## Closed
 
-- [ ] If the flowing-lava comparison shows a difference, revisit a supported
-  native route after an engine update. Current liquid detection supports water
-  only. A broad fluid watcher is outside this bounded bug-fix pass.
-
-T1 and T3 are accepted owner passes. See `TEST_FEEDBACK_2026-10-25.md`.
+- Lava, fire and pistons, and pale moss as soil: owner results 2026-11-21 in `VANILLA_PARITY.md`
+  ("In-game results"). The crop checker budget (2026-11-21) was accepted without a game check.
+- T1 and T3: accepted owner passes, see `TEST_FEEDBACK_2026-10-25.md`.
