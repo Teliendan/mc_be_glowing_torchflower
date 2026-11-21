@@ -28,8 +28,12 @@
 
             "minecraft:collision_box": false,
             "minecraft:selection_box": {
-                "origin": [-6, 0, -6],
-                "size": [12, 14, 12]
+                "origin": [-4, 0, -4],
+                "size": [8, 14, 8]
+            },
+            "minecraft:random_offset": {
+                "x": { "range": { "min": -4, "max": 4 }, "steps": 16 },
+                "z": { "range": { "min": -4, "max": 4 }, "steps": 16 }
             },
 
             "minecraft:destructible_by_mining": { "seconds_to_destroy": 0 },
