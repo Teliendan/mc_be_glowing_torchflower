@@ -2,11 +2,11 @@
 tile.torchlight:torchflower.name=Fackelblume
 torchlight.message.sweep.busy=§cEine Suche läuft bereits.
 torchlight.message.sweep.start=§7Suche nach Fackelblumen in der Nähe…
-torchlight.message.setup.start=§7Leuchtende Fackelblume: Ersteinrichtung, Fackelblumen in der Nähe werden aktiviert…
-torchlight.message.sweep.complete=§aSuche abgeschlossen. §fAktivierte Fackelblumen: %s.
+torchlight.message.setup.start=§7Leuchtende Fackelblume: Ersteinrichtung – vorhandene Fackelblumen in der Nähe werden zum Leuchten gebracht…
+torchlight.message.sweep.complete=§aSuche abgeschlossen. §fFackelblumen zum Leuchten gebracht: %s.
 torchlight.message.sweep.empty=§7Suche abgeschlossen: keine Fackelblumen in der Nähe gefunden.
-torchlight.message.setup.complete=§aErsteinrichtung abgeschlossen. §fAktivierte Fackelblumen: %s.
+torchlight.message.setup.complete=§aErsteinrichtung abgeschlossen. §fFackelblumen zum Leuchten gebracht: %s.
 torchlight.message.setup.empty=§7Ersteinrichtung abgeschlossen: keine Fackelblumen in der Nähe gefunden.
 pack.name=Torchlight — Ressourcenpaket
 pack.description=Ressourcenpaket für Torchlight: Modell, Textur und Texte der leuchtenden Fackelblume.
-torchlight.message.crops.tracked=§7Erfasste wachsende Fackelblumen: %s. Sie leuchten, sobald sie ausgewachsen sind.
+torchlight.message.crops.tracked=§7Wachsende Fackelblumen vorgemerkt: %s. Sie leuchten, sobald sie ausgewachsen sind.

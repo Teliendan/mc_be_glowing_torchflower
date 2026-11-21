@@ -2,10 +2,10 @@
 tile.torchlight:torchflower.name=Bastón de emperador
 torchlight.message.sweep.busy=§cYa hay una búsqueda en curso.
 torchlight.message.sweep.start=§7Buscando bastones de emperador cercanos…
-torchlight.message.setup.start=§7Bastón de emperador luminoso: configuración inicial, activando las flores cercanas…
-torchlight.message.sweep.complete=§aBúsqueda terminada. §fBastones de emperador activados: %s.
+torchlight.message.setup.start=§7Bastón de emperador luminoso: primera configuración, convirtiendo los bastones de emperador cercanos…
+torchlight.message.sweep.complete=§aBúsqueda terminada. §fBastones de emperador que ya brillan: %s.
 torchlight.message.sweep.empty=§7Búsqueda terminada: no hay bastones de emperador cercanos.
-torchlight.message.setup.complete=§aConfiguración inicial terminada. §fBastones de emperador activados: %s.
+torchlight.message.setup.complete=§aConfiguración inicial terminada. §fBastones de emperador que ya brillan: %s.
 torchlight.message.setup.empty=§7Configuración inicial terminada: no hay bastones de emperador cercanos.
 pack.name=Torchlight — Paquete de recursos
 pack.description=Paquete de recursos de Torchlight: modelo, textura y textos del bastón de emperador luminoso.

@@ -2,10 +2,10 @@
 tile.torchlight:torchflower.name=Plantocha
 torchlight.message.sweep.busy=§cJá há uma busca em andamento.
 torchlight.message.sweep.start=§7Procurando plantochas por perto…
-torchlight.message.setup.start=§7Plantocha luminosa: configuração inicial, ativando as flores próximas…
-torchlight.message.sweep.complete=§aBusca concluída. §fPlantochas ativadas: %s.
+torchlight.message.setup.start=§7Plantocha luminosa: configuração inicial, fazendo as plantochas próximas brilharem…
+torchlight.message.sweep.complete=§aBusca concluída. §fPlantochas que agora brilham: %s.
 torchlight.message.sweep.empty=§7Busca concluída: nenhuma plantocha encontrada por perto.
-torchlight.message.setup.complete=§aConfiguração inicial concluída. §fPlantochas ativadas: %s.
+torchlight.message.setup.complete=§aConfiguração inicial concluída. §fPlantochas que agora brilham: %s.
 torchlight.message.setup.empty=§7Configuração inicial concluída: nenhuma plantocha encontrada por perto.
 pack.name=Torchlight — Pacote de recursos
 pack.description=Pacote de recursos de Torchlight: modelo, textura e textos da plantocha luminosa.

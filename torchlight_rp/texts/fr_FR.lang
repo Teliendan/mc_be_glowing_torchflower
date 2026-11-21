@@ -2,11 +2,11 @@
 tile.torchlight:torchflower.name=Torche-fleur
 torchlight.message.sweep.busy=§cUne recherche est déjà en cours.
 torchlight.message.sweep.start=§7Recherche de torches-fleurs à proximité…
-torchlight.message.setup.start=§7Torche-fleur lumineuse : première configuration, activation des fleurs à proximité…
-torchlight.message.sweep.complete=§aRecherche terminée. §fTorches-fleurs activées : %s.
+torchlight.message.setup.start=§7Torche-fleur lumineuse : configuration initiale, conversion des torches-fleurs à proximité…
+torchlight.message.sweep.complete=§aRecherche terminée. §fTorches-fleurs désormais lumineuses : %s.
 torchlight.message.sweep.empty=§7Recherche terminée : aucune torche-fleur trouvée à proximité.
-torchlight.message.setup.complete=§aPremière configuration terminée. §fTorches-fleurs activées : %s.
-torchlight.message.setup.empty=§7Première configuration terminée : aucune torche-fleur trouvée à proximité.
+torchlight.message.setup.complete=§aConfiguration initiale terminée. §fTorches-fleurs désormais lumineuses : %s.
+torchlight.message.setup.empty=§7Configuration initiale terminée : aucune torche-fleur trouvée à proximité.
 pack.name=Torchlight — Pack de ressources
 pack.description=Pack de ressources de Torchlight : modèle, texture et textes de la torche-fleur lumineuse.
-torchlight.message.crops.tracked=§7Torches-fleurs en croissance enregistrées : %s. Elles brilleront à maturité.
+torchlight.message.crops.tracked=§7Torches-fleurs en pousse repérées : %s. Elles s'illumineront une fois à maturité.

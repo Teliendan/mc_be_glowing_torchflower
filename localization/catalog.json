@@ -34,17 +34,17 @@
               "status": "ai-draft"
             },
             "es_ES": {
-              "text": "Torchlight — Paquete de comportamiento",
+              "text": "Torchlight — Pack de comportamientos",
               "based_on": "3e61d98ea988759fba7eb358bfd8afcd916d78c63d85a87d352d4cb2cdcb5f4a",
               "status": "ai-draft"
             },
             "es_MX": {
-              "text": "Torchlight — Paquete de comportamiento",
+              "text": "Torchlight — Pack de comportamiento",
               "based_on": "3e61d98ea988759fba7eb358bfd8afcd916d78c63d85a87d352d4cb2cdcb5f4a",
               "status": "ai-draft"
             },
             "pt_PT": {
-              "text": "Torchlight — Pacote de comportamento",
+              "text": "Torchlight — Pack de Comportamento",
               "based_on": "3e61d98ea988759fba7eb358bfd8afcd916d78c63d85a87d352d4cb2cdcb5f4a",
               "status": "ai-draft"
             },
@@ -64,7 +64,7 @@
               "status": "ai-draft"
             },
             "pl_PL": {
-              "text": "Torchlight — Pakiet zachowań",
+              "text": "Torchlight — Paczka zachowań",
               "based_on": "3e61d98ea988759fba7eb358bfd8afcd916d78c63d85a87d352d4cb2cdcb5f4a",
               "status": "ai-draft"
             }
@@ -83,27 +83,27 @@
           "placeholders": [],
           "translations": {
             "cs_CZ": {
-              "text": "Balíček chování Torchlight: okrasné zázvory vydávají světlo úrovně 14.",
+              "text": "Balíček chování Torchlight: zázvor okrasný vydává světlo úrovně 14.",
               "based_on": "43cf80cde293220192a31c3de718eb6e661a165fe55a99588b62b6f966c47df2",
               "status": "ai-draft"
             },
             "es_ES": {
-              "text": "Paquete de comportamiento de Torchlight: los bastones de emperador emiten luz de nivel 14.",
+              "text": "Pack de comportamientos de Torchlight: hace que los bastones de emperador emitan luz de nivel 14.",
               "based_on": "43cf80cde293220192a31c3de718eb6e661a165fe55a99588b62b6f966c47df2",
               "status": "ai-draft"
             },
             "es_MX": {
-              "text": "Paquete de comportamiento de Torchlight: las anflorchas emiten luz de nivel 14.",
+              "text": "Pack de comportamiento de Torchlight: las anflorchas emiten luz de nivel 14.",
               "based_on": "43cf80cde293220192a31c3de718eb6e661a165fe55a99588b62b6f966c47df2",
               "status": "ai-draft"
             },
             "pt_PT": {
-              "text": "Pacote de comportamento de Torchlight: as flores-de-tocha emitem luz de nível 14.",
+              "text": "Pack de comportamento do Torchlight: as Flores-de-Tocha passam a emitir luz de nível 14.",
               "based_on": "43cf80cde293220192a31c3de718eb6e661a165fe55a99588b62b6f966c47df2",
               "status": "ai-draft"
             },
             "pt_BR": {
-              "text": "Pacote de comportamento de Torchlight: as plantochas emitem luz de nível 14.",
+              "text": "Pacote de comportamento de Torchlight: faz as plantochas brilharem com luz de nível 14.",
               "based_on": "43cf80cde293220192a31c3de718eb6e661a165fe55a99588b62b6f966c47df2",
               "status": "ai-draft"
             },
@@ -118,7 +118,7 @@
               "status": "ai-draft"
             },
             "pl_PL": {
-              "text": "Pakiet zachowań Torchlight: etlingery wyniosłe emitują światło o poziomie 14.",
+              "text": "Paczka zachowań Torchlight: etlingery wyniosłe dają światło o poziomie 14.",
               "based_on": "43cf80cde293220192a31c3de718eb6e661a165fe55a99588b62b6f966c47df2",
               "status": "ai-draft"
             }
@@ -214,7 +214,7 @@
               "status": "ai-draft"
             },
             "pt_PT": {
-              "text": "§cJá está uma pesquisa em curso.",
+              "text": "§cJá há uma pesquisa em curso.",
               "based_on": "178842a3803170e8bb93afb6bbc55ca2072bb62f4f47c6719de3f033aa599a69",
               "status": "ai-draft"
             },
@@ -256,7 +256,7 @@
           "placeholders": [],
           "translations": {
             "cs_CZ": {
-              "text": "§7Hledají se okrasné zázvory v okolí…",
+              "text": "§7Hledají se zázvory okrasné v okolí…",
               "based_on": "64111456fc4bff47c89c3a9766e285cdd0428a1abf739d35fb9b8581e2f4fbf3",
               "status": "ai-draft"
             },
@@ -271,7 +271,7 @@
               "status": "ai-draft"
             },
             "pt_PT": {
-              "text": "§7A procurar flores-de-tocha nas proximidades…",
+              "text": "§7A procurar Flores-de-Tocha nas proximidades…",
               "based_on": "64111456fc4bff47c89c3a9766e285cdd0428a1abf739d35fb9b8581e2f4fbf3",
               "status": "ai-draft"
             },
@@ -313,42 +313,42 @@
           "placeholders": [],
           "translations": {
             "cs_CZ": {
-              "text": "§7Svítící okrasný zázvor: úvodní nastavení, rozsvěcují se okrasné zázvory v okolí…",
+              "text": "§7Svítící zázvor okrasný – úvodní nastavení: rozsvěcují se zázvory okrasné v okolí…",
               "based_on": "57268692c30b7884d3a682e5a8a7a2114f677960934f49db71a7df80e0ad1989",
               "status": "ai-draft"
             },
             "es_ES": {
-              "text": "§7Bastón de emperador luminoso: configuración inicial, activando las flores cercanas…",
+              "text": "§7Bastón de emperador luminoso: primera configuración, convirtiendo los bastones de emperador cercanos…",
               "based_on": "57268692c30b7884d3a682e5a8a7a2114f677960934f49db71a7df80e0ad1989",
               "status": "ai-draft"
             },
             "es_MX": {
-              "text": "§7Anflorcha luminosa: configuración inicial, activando las flores cercanas…",
+              "text": "§7Anflorcha luminosa: configuración inicial. Encendiendo las anflorchas cercanas…",
               "based_on": "57268692c30b7884d3a682e5a8a7a2114f677960934f49db71a7df80e0ad1989",
               "status": "ai-draft"
             },
             "pt_PT": {
-              "text": "§7Flor-de-tocha luminosa: configuração inicial, a ativar as flores próximas…",
+              "text": "§7Flor-de-Tocha Luminosa: configuração inicial. A converter as Flores-de-Tocha que já existem por perto…",
               "based_on": "57268692c30b7884d3a682e5a8a7a2114f677960934f49db71a7df80e0ad1989",
               "status": "ai-draft"
             },
             "pt_BR": {
-              "text": "§7Plantocha luminosa: configuração inicial, ativando as flores próximas…",
+              "text": "§7Plantocha luminosa: configuração inicial, fazendo as plantochas próximas brilharem…",
               "based_on": "57268692c30b7884d3a682e5a8a7a2114f677960934f49db71a7df80e0ad1989",
               "status": "ai-draft"
             },
             "de_DE": {
-              "text": "§7Leuchtende Fackelblume: Ersteinrichtung, Fackelblumen in der Nähe werden aktiviert…",
+              "text": "§7Leuchtende Fackelblume: Ersteinrichtung – vorhandene Fackelblumen in der Nähe werden zum Leuchten gebracht…",
               "based_on": "57268692c30b7884d3a682e5a8a7a2114f677960934f49db71a7df80e0ad1989",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "§7Torche-fleur lumineuse : première configuration, activation des fleurs à proximité…",
+              "text": "§7Torche-fleur lumineuse : configuration initiale, conversion des torches-fleurs à proximité…",
               "based_on": "57268692c30b7884d3a682e5a8a7a2114f677960934f49db71a7df80e0ad1989",
               "status": "ai-draft"
             },
             "pl_PL": {
-              "text": "§7Świecąca etlingera wyniosła: pierwsza konfiguracja, aktywowanie kwiatów w pobliżu…",
+              "text": "§7Świecąca etlingera wyniosła: pierwsza konfiguracja, rozświetlanie etlinger w pobliżu…",
               "based_on": "57268692c30b7884d3a682e5a8a7a2114f677960934f49db71a7df80e0ad1989",
               "status": "ai-draft"
             }
@@ -374,42 +374,42 @@
           ],
           "translations": {
             "cs_CZ": {
-              "text": "§aProhledávání dokončeno. §fPočet rozsvícených okrasných zázvorů: %s.",
+              "text": "§aProhledávání dokončeno. §fRozsvícené zázvory okrasné: %s.",
               "based_on": "03a7be261cd880ac2216c42f6403c87915f738c2c9a97a015595ce88a1614200",
               "status": "ai-draft"
             },
             "es_ES": {
-              "text": "§aBúsqueda terminada. §fBastones de emperador activados: %s.",
+              "text": "§aBúsqueda terminada. §fBastones de emperador que ya brillan: %s.",
               "based_on": "03a7be261cd880ac2216c42f6403c87915f738c2c9a97a015595ce88a1614200",
               "status": "ai-draft"
             },
             "es_MX": {
-              "text": "§aBúsqueda terminada. §fAnflorchas activadas: %s.",
+              "text": "§aBúsqueda terminada. §fAnflorchas encendidas: %s.",
               "based_on": "03a7be261cd880ac2216c42f6403c87915f738c2c9a97a015595ce88a1614200",
               "status": "ai-draft"
             },
             "pt_PT": {
-              "text": "§aPesquisa concluída. §fFlores-de-tocha ativadas: %s.",
+              "text": "§aPesquisa concluída. §fFlores-de-Tocha que passaram a brilhar: %s.",
               "based_on": "03a7be261cd880ac2216c42f6403c87915f738c2c9a97a015595ce88a1614200",
               "status": "ai-draft"
             },
             "pt_BR": {
-              "text": "§aBusca concluída. §fPlantochas ativadas: %s.",
+              "text": "§aBusca concluída. §fPlantochas que agora brilham: %s.",
               "based_on": "03a7be261cd880ac2216c42f6403c87915f738c2c9a97a015595ce88a1614200",
               "status": "ai-draft"
             },
             "de_DE": {
-              "text": "§aSuche abgeschlossen. §fAktivierte Fackelblumen: %s.",
+              "text": "§aSuche abgeschlossen. §fFackelblumen zum Leuchten gebracht: %s.",
               "based_on": "03a7be261cd880ac2216c42f6403c87915f738c2c9a97a015595ce88a1614200",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "§aRecherche terminée. §fTorches-fleurs activées : %s.",
+              "text": "§aRecherche terminée. §fTorches-fleurs désormais lumineuses : %s.",
               "based_on": "03a7be261cd880ac2216c42f6403c87915f738c2c9a97a015595ce88a1614200",
               "status": "ai-draft"
             },
             "pl_PL": {
-              "text": "§aWyszukiwanie zakończone. §fAktywowane etlingery wyniosłe: %s.",
+              "text": "§aWyszukiwanie zakończone. §fEtlingery wyniosłe, które teraz świecą: %s.",
               "based_on": "03a7be261cd880ac2216c42f6403c87915f738c2c9a97a015595ce88a1614200",
               "status": "ai-draft"
             }
@@ -429,7 +429,7 @@
           "placeholders": [],
           "translations": {
             "cs_CZ": {
-              "text": "§7Prohledávání dokončeno: v okolí nejsou žádné okrasné zázvory.",
+              "text": "§7Prohledávání dokončeno: v okolí není žádný zázvor okrasný.",
               "based_on": "eb46fe222b8655925c6dc5c0fda56f90cfc6b16423bdf3b2aa5da4925cdda2c0",
               "status": "ai-draft"
             },
@@ -444,7 +444,7 @@
               "status": "ai-draft"
             },
             "pt_PT": {
-              "text": "§7Pesquisa concluída: não foram encontradas flores-de-tocha próximas.",
+              "text": "§7Pesquisa concluída: não há Flores-de-Tocha por perto.",
               "based_on": "eb46fe222b8655925c6dc5c0fda56f90cfc6b16423bdf3b2aa5da4925cdda2c0",
               "status": "ai-draft"
             },
@@ -490,42 +490,42 @@
           ],
           "translations": {
             "cs_CZ": {
-              "text": "§aÚvodní nastavení dokončeno. §fPočet rozsvícených okrasných zázvorů: %s.",
+              "text": "§aÚvodní nastavení dokončeno. §fRozsvícené zázvory okrasné: %s.",
               "based_on": "282ba5e782076c25fe2e894ebb8bbb279b29cf3954ed5b29c6bf78b280397a51",
               "status": "ai-draft"
             },
             "es_ES": {
-              "text": "§aConfiguración inicial terminada. §fBastones de emperador activados: %s.",
+              "text": "§aConfiguración inicial terminada. §fBastones de emperador que ya brillan: %s.",
               "based_on": "282ba5e782076c25fe2e894ebb8bbb279b29cf3954ed5b29c6bf78b280397a51",
               "status": "ai-draft"
             },
             "es_MX": {
-              "text": "§aConfiguración inicial terminada. §fAnflorchas activadas: %s.",
+              "text": "§aConfiguración inicial terminada. §fAnflorchas encendidas: %s.",
               "based_on": "282ba5e782076c25fe2e894ebb8bbb279b29cf3954ed5b29c6bf78b280397a51",
               "status": "ai-draft"
             },
             "pt_PT": {
-              "text": "§aConfiguração inicial concluída. §fFlores-de-tocha ativadas: %s.",
+              "text": "§aConfiguração inicial concluída. §fFlores-de-Tocha que passaram a brilhar: %s.",
               "based_on": "282ba5e782076c25fe2e894ebb8bbb279b29cf3954ed5b29c6bf78b280397a51",
               "status": "ai-draft"
             },
             "pt_BR": {
-              "text": "§aConfiguração inicial concluída. §fPlantochas ativadas: %s.",
+              "text": "§aConfiguração inicial concluída. §fPlantochas que agora brilham: %s.",
               "based_on": "282ba5e782076c25fe2e894ebb8bbb279b29cf3954ed5b29c6bf78b280397a51",
               "status": "ai-draft"
             },
             "de_DE": {
-              "text": "§aErsteinrichtung abgeschlossen. §fAktivierte Fackelblumen: %s.",
+              "text": "§aErsteinrichtung abgeschlossen. §fFackelblumen zum Leuchten gebracht: %s.",
               "based_on": "282ba5e782076c25fe2e894ebb8bbb279b29cf3954ed5b29c6bf78b280397a51",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "§aPremière configuration terminée. §fTorches-fleurs activées : %s.",
+              "text": "§aConfiguration initiale terminée. §fTorches-fleurs désormais lumineuses : %s.",
               "based_on": "282ba5e782076c25fe2e894ebb8bbb279b29cf3954ed5b29c6bf78b280397a51",
               "status": "ai-draft"
             },
             "pl_PL": {
-              "text": "§aPierwsza konfiguracja zakończona. §fAktywowane etlingery wyniosłe: %s.",
+              "text": "§aPierwsza konfiguracja zakończona. §fEtlingery wyniosłe, które teraz świecą: %s.",
               "based_on": "282ba5e782076c25fe2e894ebb8bbb279b29cf3954ed5b29c6bf78b280397a51",
               "status": "ai-draft"
             }
@@ -545,7 +545,7 @@
           "placeholders": [],
           "translations": {
             "cs_CZ": {
-              "text": "§7Úvodní nastavení dokončeno: v okolí nejsou žádné okrasné zázvory.",
+              "text": "§7Úvodní nastavení dokončeno: v okolí není žádný zázvor okrasný.",
               "based_on": "f3ad49482bd4dc11e0ec8e99e61d6f448195b1cd3ecb2868966a5b3a3cc0d8ce",
               "status": "ai-draft"
             },
@@ -560,7 +560,7 @@
               "status": "ai-draft"
             },
             "pt_PT": {
-              "text": "§7Configuração inicial concluída: não foram encontradas flores-de-tocha próximas.",
+              "text": "§7Configuração inicial concluída: não há Flores-de-Tocha por perto.",
               "based_on": "f3ad49482bd4dc11e0ec8e99e61d6f448195b1cd3ecb2868966a5b3a3cc0d8ce",
               "status": "ai-draft"
             },
@@ -575,7 +575,7 @@
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "§7Première configuration terminée : aucune torche-fleur trouvée à proximité.",
+              "text": "§7Configuration initiale terminée : aucune torche-fleur trouvée à proximité.",
               "based_on": "f3ad49482bd4dc11e0ec8e99e61d6f448195b1cd3ecb2868966a5b3a3cc0d8ce",
               "status": "ai-draft"
             },
@@ -609,12 +609,12 @@
               "status": "ai-draft"
             },
             "es_MX": {
-              "text": "Torchlight — Paquete de recursos",
+              "text": "Torchlight — Pack de recursos",
               "based_on": "440215b55457fc247c5f15b574635f886a39425679f55fac38bd2bd1898cc0fb",
               "status": "ai-draft"
             },
             "pt_PT": {
-              "text": "Torchlight — Pacote de recursos",
+              "text": "Torchlight — Pack de Recursos",
               "based_on": "440215b55457fc247c5f15b574635f886a39425679f55fac38bd2bd1898cc0fb",
               "status": "ai-draft"
             },
@@ -634,7 +634,7 @@
               "status": "ai-draft"
             },
             "pl_PL": {
-              "text": "Torchlight — Pakiet zasobów",
+              "text": "Torchlight — Paczka zasobów",
               "based_on": "440215b55457fc247c5f15b574635f886a39425679f55fac38bd2bd1898cc0fb",
               "status": "ai-draft"
             }
@@ -653,7 +653,7 @@
           "placeholders": [],
           "translations": {
             "cs_CZ": {
-              "text": "Balíček zdrojů Torchlight: model, textura a texty svítícího okrasného zázvoru.",
+              "text": "Balíček zdrojů Torchlight: model, textura a texty svítícího zázvoru okrasného.",
               "based_on": "b2cc2530c8ccde097efa11cce41958b8ec0d1a41ff40e16db7caa7bfa31d909c",
               "status": "ai-draft"
             },
@@ -663,12 +663,12 @@
               "status": "ai-draft"
             },
             "es_MX": {
-              "text": "Paquete de recursos de Torchlight: modelo, textura y textos de la anflorcha luminosa.",
+              "text": "Pack de recursos de Torchlight: modelo, textura y textos de la anflorcha luminosa.",
               "based_on": "b2cc2530c8ccde097efa11cce41958b8ec0d1a41ff40e16db7caa7bfa31d909c",
               "status": "ai-draft"
             },
             "pt_PT": {
-              "text": "Pacote de recursos de Torchlight: modelo, textura e textos da flor-de-tocha luminosa.",
+              "text": "Pack de recursos do Torchlight: modelo, textura e textos da Flor-de-Tocha luminosa.",
               "based_on": "b2cc2530c8ccde097efa11cce41958b8ec0d1a41ff40e16db7caa7bfa31d909c",
               "status": "ai-draft"
             },
@@ -688,7 +688,7 @@
               "status": "ai-draft"
             },
             "pl_PL": {
-              "text": "Pakiet zasobów Torchlight: model, tekstura i teksty świecącej etlingery wyniosłej.",
+              "text": "Paczka zasobów Torchlight: model, tekstura i teksty świecącej etlingery wyniosłej.",
               "based_on": "b2cc2530c8ccde097efa11cce41958b8ec0d1a41ff40e16db7caa7bfa31d909c",
               "status": "ai-draft"
             }
@@ -716,7 +716,7 @@
           ],
           "translations": {
             "cs_CZ": {
-              "text": "§7Zaregistrované rostoucí zázvory okrasné: %s. Po dozrání budou svítit.",
+              "text": "§7Nalezené rostoucí zázvory okrasné: %s. Až dorostou, rozsvítí se.",
               "based_on": "d7558ddce8e91b50deff5f221845da3767fccaa8b4774c375a3b5aa779e7115c",
               "status": "ai-draft"
             },
@@ -726,7 +726,7 @@
               "status": "ai-draft"
             },
             "es_MX": {
-              "text": "§7Anflorchas en crecimiento registradas: %s. Brillarán cuando maduren.",
+              "text": "§7Cultivos de anflorcha registrados: %s. Brillarán al madurar.",
               "based_on": "d7558ddce8e91b50deff5f221845da3767fccaa8b4774c375a3b5aa779e7115c",
               "status": "ai-draft"
             },
@@ -741,17 +741,17 @@
               "status": "ai-draft"
             },
             "de_DE": {
-              "text": "§7Erfasste wachsende Fackelblumen: %s. Sie leuchten, sobald sie ausgewachsen sind.",
+              "text": "§7Wachsende Fackelblumen vorgemerkt: %s. Sie leuchten, sobald sie ausgewachsen sind.",
               "based_on": "d7558ddce8e91b50deff5f221845da3767fccaa8b4774c375a3b5aa779e7115c",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "§7Torches-fleurs en croissance enregistrées : %s. Elles brilleront à maturité.",
+              "text": "§7Torches-fleurs en pousse repérées : %s. Elles s'illumineront une fois à maturité.",
               "based_on": "d7558ddce8e91b50deff5f221845da3767fccaa8b4774c375a3b5aa779e7115c",
               "status": "ai-draft"
             },
             "pl_PL": {
-              "text": "§7Zarejestrowane rosnące etlingery wyniosłe: %s. Będą świecić, gdy dojrzeją.",
+              "text": "§7Zapamiętane rosnące etlingery wyniosłe: %s. Zaświecą, gdy dojrzeją.",
               "based_on": "d7558ddce8e91b50deff5f221845da3767fccaa8b4774c375a3b5aa779e7115c",
               "status": "ai-draft"
             }
@@ -785,7 +785,7 @@
   },
   "style": {
     "audience": "Minecraft players; concise UI and gentle woodland narrative where applicable.",
-    "address": "Czech respectful plural address; Spanish tú; Portuguese Portugal tu, Brazil você; German du; French tu; Polish ty. Avoid assuming player gender.",
+    "address": "Czech respectful plural address; Spanish tú; Portuguese Portugal tu, Brazil você; German du; French vous (as vanilla Bedrock); Polish ty. Avoid assuming player gender.",
     "review": "AI draft, not independently language-reviewed or tested in game.",
     "reference": "Locale list verified in installed 1.26.52 reference. Vanilla terminology checked against Mojang bedrock-samples commit 46ba6ea985fb5a92d79a9419198f10dda14c199d; sample terms documented, not checked in game."
   }

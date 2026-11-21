@@ -2,11 +2,11 @@
 tile.torchlight:torchflower.name=Anflorcha
 torchlight.message.sweep.busy=§cYa hay una búsqueda en curso.
 torchlight.message.sweep.start=§7Buscando anflorchas cercanas…
-torchlight.message.setup.start=§7Anflorcha luminosa: configuración inicial, activando las flores cercanas…
-torchlight.message.sweep.complete=§aBúsqueda terminada. §fAnflorchas activadas: %s.
+torchlight.message.setup.start=§7Anflorcha luminosa: configuración inicial. Encendiendo las anflorchas cercanas…
+torchlight.message.sweep.complete=§aBúsqueda terminada. §fAnflorchas encendidas: %s.
 torchlight.message.sweep.empty=§7Búsqueda terminada: no hay anflorchas cercanas.
-torchlight.message.setup.complete=§aConfiguración inicial terminada. §fAnflorchas activadas: %s.
+torchlight.message.setup.complete=§aConfiguración inicial terminada. §fAnflorchas encendidas: %s.
 torchlight.message.setup.empty=§7Configuración inicial terminada: no hay anflorchas cercanas.
-pack.name=Torchlight — Paquete de recursos
-pack.description=Paquete de recursos de Torchlight: modelo, textura y textos de la anflorcha luminosa.
-torchlight.message.crops.tracked=§7Anflorchas en crecimiento registradas: %s. Brillarán cuando maduren.
+pack.name=Torchlight — Pack de recursos
+pack.description=Pack de recursos de Torchlight: modelo, textura y textos de la anflorcha luminosa.
+torchlight.message.crops.tracked=§7Cultivos de anflorcha registrados: %s. Brillarán al madurar.
