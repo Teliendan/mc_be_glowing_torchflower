@@ -13,8 +13,9 @@ async function harness(initial = []) {
     } }) });
     const fire = (name, event = {}) => { for (const fn of callbacks.get(name) || []) fn(event); };
     const key = p => `${p.x},${p.y},${p.z}`;
-    const volumeCalls = [];
-    const dimension = { id: "overworld", heightRange: { min: -64, max: 320 }, getBlock: p => cells.get(key(p)),
+    const volumeCalls = [], counts = { getBlock: 0, loaded: 0, set: 0 };
+    const dimension = { id: "overworld", heightRange: { min: -64, max: 320 }, getBlock: p => { counts.getBlock++; return cells.get(key(p)); },
+        isChunkLoaded: p => { counts.loaded++; return cells.has(key(p)); },
         getBlocks(volume, filter, allowUnloaded) {
             assert.equal(allowUnloaded, true, "sweep tolerates unloaded chunks");
             const { from, to } = volume;
@@ -45,12 +46,12 @@ async function harness(initial = []) {
     assert.equal(timers.size,0,"no pre-world interval");
     ready=true; fire("worldLoad");
     const put = (x,typeId) => {
-        const block={location:{x,y:0,z:0},typeId,dimension,setPermutation(p) { this.typeId=p.typeId; }};
+        const block={location:{x,y:0,z:0},typeId,dimension,setPermutation(p) { counts.set++; this.typeId=p.typeId; }};
         cells.set(key(block.location),block); return block;
     };
     const messages = [];
     const player = {dimension, location:{x:0,y:0,z:0},sendMessage(m){messages.push(m);}};
-    return { timers, fire, callbacks, subscribeOptions, put, props, cells, jobs, volumeCalls, messages, player, get writes() { return writes; },
+    return { counts, timers, fire, callbacks, subscribeOptions, put, props, cells, jobs, volumeCalls, messages, player, get writes() { return writes; },
         sweep() { fire("scriptEventReceive",{id:"torchlight:sweep",sourceEntity:player}); },
         stepJob() { if(jobs[0]?.next().done) jobs.shift(); },
         finishJob() { let steps=0; while(jobs.length) { assert.ok(++steps < 5000); this.stepJob(); } },
@@ -125,3 +126,68 @@ console.log("PASS production crop timer: idle, deduplication, maturity, unloaded
     assert.deepEqual(h.subscribeOptions.get("playerPlaceBlock"),{blockTypes:["minecraft:torchflower","minecraft:torchflower_crop"]});
 }
 console.log("PASS native crop discovery: manual/migration enrollment, deduplication and maturity");
+
+// Budget: one checker call reads at most 32 crops however many are tracked; the list is parsed once and written only on change.
+{
+    const N = 500, initial = [];
+    for (let x = 0; x < N; x++) initial.push({ x, y: 0, z: 0, d: "overworld" });
+    const h = await harness(initial);
+    for (let x = 0; x < N; x++) h.put(x, "minecraft:torchflower_crop");
+    const parse = JSON.parse; let parses = 0; JSON.parse = (...a) => { parses++; return parse(...a); };
+    try {
+        let worst = 0, worstLoaded = 0;
+        const writes = h.writes;
+        for (let i = 0; i < 40; i++) {
+            const before = { ...h.counts }; h.check();
+            worst = Math.max(worst, h.counts.getBlock - before.getBlock); worstLoaded = Math.max(worstLoaded, h.counts.loaded - before.loaded);
+        }
+        assert.ok(worst <= 32 && worstLoaded <= 32, `worst call read ${worst} blocks / ${worstLoaded} chunk checks`);
+        assert.equal(worst, 32, "a big farm uses the full slice per call");
+        assert.equal(parses, 0, "no JSON.parse per interval");
+        assert.equal(h.writes, writes, "no property write while nothing changes");
+        // rotation: 40 calls x 32 = 1280 reads cover every crop at least twice
+        const h2 = await harness(initial);
+        for (let x = 0; x < N; x++) h2.put(x, "minecraft:torchflower_crop");
+        h2.cells.get("499,0,0").typeId = "minecraft:torchflower";
+        for (let i = 0; i < Math.ceil(N / 32); i++) h2.check();
+        assert.equal(h2.cells.get("499,0,0").typeId, "torchlight:torchflower", "rotation reaches the last crop within ceil(N/32) calls");
+        assert.equal(JSON.parse(h2.props.get("torchlight:pending_crops")).length, N - 1, "matured crop leaves the list");
+        assert.equal(h2.timers.size, 1);
+    } finally { JSON.parse = parse; }
+}
+{
+    // unloaded crops cost one chunk check, no block read; they stay tracked; the cursor never gets stuck on them
+    const initial = []; for (let x = 0; x < 100; x++) initial.push({ x, y: 0, z: 0, d: "overworld" });
+    const h = await harness(initial);
+    h.put(99, "minecraft:torchflower"); // only the last one is loaded
+    for (let i = 0; i < 4; i++) h.check();
+    assert.equal(h.cells.get("99,0,0").typeId, "torchlight:torchflower");
+    assert.equal(h.counts.getBlock, 1, "unloaded crops are never read");
+    assert.equal(JSON.parse(h.props.get("torchlight:pending_crops")).length, 99, "unloaded crops stay tracked");
+    assert.equal(h.timers.size, 1);
+}
+{
+    // dropping entries keeps the rotation fair: removed crops do not make later ones skipped
+    const initial = []; for (let x = 0; x < 100; x++) initial.push({ x, y: 0, z: 0, d: "overworld" });
+    const h = await harness(initial);
+    for (let x = 0; x < 100; x++) h.put(x, x < 10 ? "minecraft:air" : "minecraft:torchflower_crop");
+    h.cells.get("95,0,0").typeId = "minecraft:torchflower";
+    for (let i = 0; i < 4; i++) h.check();
+    assert.equal(h.cells.get("95,0,0").typeId, "torchlight:torchflower");
+    assert.equal(JSON.parse(h.props.get("torchlight:pending_crops")).length, 89);
+}
+console.log("PASS crop checker budget: <= 32 reads per call, no parse, write on change, fair rotation");
+
+// Sweep budget: a column full of flowers yields every 16 glow swaps.
+{
+    const h = await harness();
+    for (let i = 0; i < 40; i++) { const x = i % 4, y = Math.floor(i / 4); h.cells.set(`${x},${y},0`, { location: { x, y, z: 0 }, typeId: "minecraft:torchflower", dimension: null,
+        setPermutation(p) { h.counts.set++; this.typeId = p.typeId; } }); }
+    h.sweep();
+    let worst = 0, steps = 0;
+    while (h.jobs.length) { const before = h.counts.set; h.stepJob(); worst = Math.max(worst, h.counts.set - before); assert.ok(++steps < 5000); }
+    assert.ok(worst <= 16, `worst sweep step wrote ${worst} blocks`);
+    assert.equal(h.counts.set, 40, "all flowers still converted");
+    assert.ok(h.messages.some(m => m[0] === "sweep.complete" && m[1] === 40));
+}
+console.log("PASS sweep budget: <= 16 glow writes per job step");

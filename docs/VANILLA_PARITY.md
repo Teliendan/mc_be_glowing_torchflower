@@ -7,7 +7,7 @@ Target Bedrock 1.26.52 / Script API 2.8.0. History: see git (inspection narrativ
   `torchlight:torchflower` (light 14). Item, loot (one vanilla torchflower), dye, stew, compost and bee-feed routes stay vanilla by identity.
 - The growing `minecraft:torchflower_crop` stays fully native (growth, bone meal, trampling). Mature vanilla flowers do not
   reproduce with bone meal, so no handler is added (see VERIFIER_WARNINGS.md).
-- Player-planted crops are tracked by position (persisted) and re-checked every 20 ticks (1 s; 100 until 2026-11-17, owner saw a several-second delay in game; the 1 s value is not re-tested yet) only while the list is non-empty.
+- Player-planted crops are tracked by position (persisted) and re-checked every 20 ticks (1 s; 100 until 2026-11-17, owner saw a several-second delay in game; the 1 s value is not re-tested yet) only while the list is non-empty. Since 2026-11-21 each check reads at most 32 crops in rotation (owner decision, tablet budget): on a farm of <= 32 crops a grown crop still glows within ~1 s, on a bigger farm it may take N/32 seconds (e.g. 200 crops: up to ~7 s).
   No world scanning. Setup sweep (once per world) and `/scriptevent torchlight:sweep` also enroll growing crops they find; one save at the end of the job.
 - Soils: ten documented soils in both the block `placement_filter` and `support.js` SOILS (includes mycelium, muddy mangrove roots).
 - Fire: catch 30 / destroy 100 (Bedrock one-block-flower row); no adjacent-lava ignition. Water pops it (WATER.md). Pistons and soil motion: SUPPORT_AND_PISTONS.md.
@@ -20,7 +20,7 @@ Target Bedrock 1.26.52 / Script API 2.8.0. History: see git (inspection narrativ
 
 ## Known limits
 - Farmers can plant torchflower seeds only if a player gives or drops them; the mature flower then stays unlit until a sweep. Stable 2.8 has no crop-growth or villager-planting event.
-- Crops in chunks that never reload stay in the tracked list and are retried every 1 s (one failed `getBlock` each); cheap, so not pruned.
+- Crops in chunks that never reload stay in the tracked list; the checker skips them with `isChunkLoaded` (no block read) and drops an entry only when its chunk is loaded and the block is no longer a growing crop.
 - Bees: the custom placed block is not recognised for nectar or tree nests (bee override deferred). Normal potting uses the vanilla item and leaves a native, unlit pot.
 - Fire spread and flowing-lava removal use documented values, not observed in game.
 
@@ -39,3 +39,9 @@ Source review against the 26.60 changelog and API 2.11.0 / 2.12.0-beta declarati
 - Deferred: experimental `minecraft:neighbor_change` / `onNeighborChanged` (block format 1.26.60, beta API 2.12.0; 4,096 queued and 100 per tick per chunk) could detect flowing lava next to the flower (see TODO "revisit a supported native route") and part of the piston/support service. Wait for stable; note it in the TODO when it ships.
 - `liquid_detection` is still water only, so the flowing-lava item is unchanged. No crop-growth event in 2.11.0; the crop poll stays (20 ticks).
 - Owner checks on 26.60: break the soil under a placed flower (exactly one drop, no content-log warning); two rapid piston pushes of the soil (one pop, one drop); piston replacing the soil with another valid soil pops the flower; light 14, water pop, crop-to-flower after reload.
+
+## Performance (2026-11-21, Bedrock 1.26.63; budget tests in `tests/crop_lifecycle.mjs`)
+
+- Crop list: kept in memory (loaded once at worldLoad, written to the dynamic property only when it changes). Checker call: <= 32 chunk checks + <= 32 `getBlock`, no JSON parse (was: parse + one read per tracked crop, every second).
+- Sweep / setup migration: a job step is one filtered column query plus at most 16 glow swaps, then it yields (was: every hit of the column in one step, up to 256 writes).
+- Not measured in game (no DIAG build); the counts come from the counting mock. Tracking many crops at once (sweep end) is one dedupe pass plus one property write.
