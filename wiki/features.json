@@ -24,11 +24,11 @@
       "evidence": [
         {
           "path": "docs/VANILLA_PARITY.md",
-          "sha256": "eba75317464bd8c1949a0c88dc7aea6af2dc64c9d30b716dd51bc9fe055bd18e"
+          "sha256": "7b1acc73730a1ecbe4a11edafd0a8fdab6fa39c69d6d179649042f03a7da567c"
         },
         {
           "path": "torchlight_bp/blocks/torchflower.json",
-          "sha256": "38ace5f41f152d6d2a64614b92fb1dd9bff74b2e51c40804f4da1ec7b09d5d43"
+          "sha256": "819893a2f4429a838f9ebb0442586a5f41289817f7f53479579659abc7adda2f"
         },
         {
           "path": "torchlight_bp/scripts/main.js",
