@@ -131,4 +131,4 @@ test("unloaded or moving support remains unknown until recovery", () => {
 });
 
 for (const { name, run } of tests) { run(); console.log(`PASS ${name}`); }
-console.log(`${tests.length} Torchlight support regressions passed.`);
+console.log(`${tests.length} Glowing Torchflower support regressions passed.`);

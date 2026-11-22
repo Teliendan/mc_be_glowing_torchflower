@@ -2,7 +2,7 @@
 
 Torchflowers glow with light level 14, as bright as a torch, as if their bloom were a real flame. Everything else about the flower stays vanilla.
 
-> **Status: Not released yet.** The first test version will appear on the Releases page. Download: [Releases page](https://github.com/Teliendan/mc_be_torchlight/releases).
+> **Status: Not released yet.** The first test version will appear on the Releases page. Download: [Releases page](https://github.com/Teliendan/mc_be_glowing_torchflower/releases).
 
 ## Features
 
@@ -16,7 +16,7 @@ Torchflowers glow with light level 14, as bright as a torch, as if their bloom w
 
 ## Install
 
-1. Download the `.mcaddon` from the [Releases page](https://github.com/Teliendan/mc_be_torchlight/releases) once the first version is out.
+1. Download the `.mcaddon` from the [Releases page](https://github.com/Teliendan/mc_be_glowing_torchflower/releases) once the first version is out.
 2. Open the file with Minecraft on Windows, Android or iPhone/iPad; it imports both packs.
 3. In the world settings, turn on the Glowing Torchflower **behavior pack** (its resource pack comes with it). New and existing worlds both work.
 
@@ -57,4 +57,4 @@ How the glowing flower works, pack layout, tests and design notes: [docs/DEVELOP
 
 ## What's new
 
-The changelog starts with the first release; see the [Releases page](https://github.com/Teliendan/mc_be_torchlight/releases).
+The changelog starts with the first release; see the [Releases page](https://github.com/Teliendan/mc_be_glowing_torchflower/releases).

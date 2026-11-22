@@ -10,7 +10,7 @@ live in the versioned update pack that introduced them (torchflower arrived with
 1.20.0 and is re-shipped in 1.21.90). This script searches all of them and takes
 the newest copy.
 
-Run:  python mods/torchlight/tools/make_torchflower_texture.py [--force]
+Run:  python mods/glowing_torchflower/tools/make_torchflower_texture.py [--force]
 """
 
 import argparse

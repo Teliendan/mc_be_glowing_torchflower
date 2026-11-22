@@ -1,6 +1,6 @@
 # Glowing Torchflower: development
 
-Folder, repository and namespace still use the old working name `torchlight`.
+Folder and repository: `glowing_torchflower`. Pack folders, the namespace and the sweep command still use the old working name `torchlight`.
 
 - Vanilla blocks are hardcoded and cannot be given light, so the placed flower is swapped for a
   visually identical custom block `torchlight:torchflower` (light 14). The item, loot, dye, stew,
@@ -12,8 +12,8 @@ Folder, repository and namespace still use the old working name `torchlight`.
 - Packs: `torchlight_bp/` (JSON plus Script API in `scripts/`) and `torchlight_rp/`. Pack format
   and Script API: `@minecraft/server` 2.8.0, min engine 1.21.120 (`torchlight_bp/manifest.json`).
 - `tools/make_torchflower_texture.py` copies the 16x16 vanilla torchflower sprite into the RP.
-- Deploy with `.\mods deploy torchlight` from the workspace; build the add-on locally with
-  `.\mods package torchlight`. Tests: `node tests/run.mjs` (also run by `.\mods verify torchlight`).
+- Deploy with `.\mods deploy glowing_torchflower` from the workspace; build the add-on locally with
+  `.\mods package glowing_torchflower`. Tests: `node tests/run.mjs` (also run by `.\mods verify glowing_torchflower`).
 - Unreleased player-facing changes wait in `changes/`; `CHANGELOG.md` is written by the first
   release.
 - Design, support rules, limits and in-game checks: [VANILLA_PARITY.md](VANILLA_PARITY.md),

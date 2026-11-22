@@ -17,7 +17,7 @@ script; `scripts/support.js` supplies the flower's support and loot rules.
 
 Offline regressions cover flower configuration, valid replacement, pre-event tick ordering, an unrelated nearby
 flower, duplicate piston jobs, native popping, random-tick soil conversion and reload recovery, plus an eleven-soil check that rejects
-stone/sand. Run `.\mods verify torchlight` (includes `tests/run.mjs`). Pale moss block: the owner saw it hold vanilla
+stone/sand. Run `.\mods verify glowing_torchflower` (includes `tests/run.mjs`). Pale moss block: the owner saw it hold vanilla
 flowers (1.26.63, 2026-11-21).
 
 Design rule (owner, 2026-10-11): no looping per-block timers. Piston events discover cold flowers, soil removed by players,
