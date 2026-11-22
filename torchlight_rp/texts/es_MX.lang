@@ -8,5 +8,5 @@ torchlight.message.sweep.empty=§7Búsqueda terminada: no hay anflorchas cercana
 torchlight.message.setup.complete=§aConfiguración inicial terminada. §fAnflorchas encendidas: %s.
 torchlight.message.setup.empty=§7Configuración inicial terminada: no hay anflorchas cercanas.
 pack.name=Torchlight — Pack de recursos
-pack.description=Pack de recursos de Torchlight: modelo, textura y textos de la anflorcha luminosa.
+pack.description=v1.0.0 · Pack de recursos de Torchlight: modelo, textura y textos de la anflorcha luminosa.
 torchlight.message.crops.tracked=§7Cultivos de anflorcha registrados: %s. Brillarán al madurar.

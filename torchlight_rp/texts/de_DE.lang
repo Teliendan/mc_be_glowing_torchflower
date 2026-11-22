@@ -8,5 +8,5 @@ torchlight.message.sweep.empty=§7Suche abgeschlossen: keine Fackelblumen in der
 torchlight.message.setup.complete=§aErsteinrichtung abgeschlossen. §fFackelblumen zum Leuchten gebracht: %s.
 torchlight.message.setup.empty=§7Ersteinrichtung abgeschlossen: keine Fackelblumen in der Nähe gefunden.
 pack.name=Torchlight — Ressourcenpaket
-pack.description=Ressourcenpaket für Torchlight: Modell, Textur und Texte der leuchtenden Fackelblume.
+pack.description=v1.0.0 · Ressourcenpaket für Torchlight: Modell, Textur und Texte der leuchtenden Fackelblume.
 torchlight.message.crops.tracked=§7Wachsende Fackelblumen vorgemerkt: %s. Sie leuchten, sobald sie ausgewachsen sind.

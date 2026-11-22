@@ -8,5 +8,5 @@ torchlight.message.sweep.empty=§7Búsqueda terminada: no hay bastones de empera
 torchlight.message.setup.complete=§aConfiguración inicial terminada. §fBastones de emperador que ya brillan: %s.
 torchlight.message.setup.empty=§7Configuración inicial terminada: no hay bastones de emperador cercanos.
 pack.name=Torchlight — Paquete de recursos
-pack.description=Paquete de recursos de Torchlight: modelo, textura y textos del bastón de emperador luminoso.
+pack.description=v1.0.0 · Paquete de recursos de Torchlight: modelo, textura y textos del bastón de emperador luminoso.
 torchlight.message.crops.tracked=§7Bastones de emperador en crecimiento registrados: %s. Brillarán cuando maduren.

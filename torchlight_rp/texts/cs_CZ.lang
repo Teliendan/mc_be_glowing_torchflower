@@ -8,5 +8,5 @@ torchlight.message.sweep.empty=§7Prohledávání dokončeno: v okolí není ž�
 torchlight.message.setup.complete=§aÚvodní nastavení dokončeno. §fRozsvícené zázvory okrasné: %s.
 torchlight.message.setup.empty=§7Úvodní nastavení dokončeno: v okolí není žádný zázvor okrasný.
 pack.name=Torchlight — Balíček zdrojů
-pack.description=Balíček zdrojů Torchlight: model, textura a texty svítícího zázvoru okrasného.
+pack.description=v1.0.0 · Balíček zdrojů Torchlight: model, textura a texty svítícího zázvoru okrasného.
 torchlight.message.crops.tracked=§7Nalezené rostoucí zázvory okrasné: %s. Až dorostou, rozsvítí se.

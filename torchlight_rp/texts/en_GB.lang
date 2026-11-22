@@ -9,5 +9,5 @@ torchlight.message.sweep.empty=§7Sweep complete: no existing torchflowers found
 torchlight.message.setup.complete=§aFirst-time setup complete. §fTorchflowers now glowing: %s.
 torchlight.message.setup.empty=§7First-time setup complete: no existing torchflowers found nearby.
 pack.name=Torchlight — Resource Pack
-pack.description=Torchlight resource pack: glowing torchflower model, texture and text.
+pack.description=v1.0.0 · Torchlight resource pack: glowing torchflower model, texture and text.
 torchlight.message.crops.tracked=§7Growing torchflowers registered: %s. They will glow when mature.

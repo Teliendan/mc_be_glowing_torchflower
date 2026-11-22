@@ -8,5 +8,5 @@ torchlight.message.sweep.empty=§7Recherche terminée : aucune torche-fleur trou
 torchlight.message.setup.complete=§aConfiguration initiale terminée. §fTorches-fleurs désormais lumineuses : %s.
 torchlight.message.setup.empty=§7Configuration initiale terminée : aucune torche-fleur trouvée à proximité.
 pack.name=Torchlight — Pack de ressources
-pack.description=Pack de ressources de Torchlight : modèle, texture et textes de la torche-fleur lumineuse.
+pack.description=v1.0.0 · Pack de ressources de Torchlight : modèle, texture et textes de la torche-fleur lumineuse.
 torchlight.message.crops.tracked=§7Torches-fleurs en pousse repérées : %s. Elles s'illumineront une fois à maturité.

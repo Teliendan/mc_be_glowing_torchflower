@@ -8,5 +8,5 @@ torchlight.message.sweep.empty=§7Wyszukiwanie zakończone: brak etlinger wynios
 torchlight.message.setup.complete=§aPierwsza konfiguracja zakończona. §fEtlingery wyniosłe, które teraz świecą: %s.
 torchlight.message.setup.empty=§7Pierwsza konfiguracja zakończona: brak etlinger wyniosłych w pobliżu.
 pack.name=Torchlight — Paczka zasobów
-pack.description=Paczka zasobów Torchlight: model, tekstura i teksty świecącej etlingery wyniosłej.
+pack.description=v1.0.0 · Paczka zasobów Torchlight: model, tekstura i teksty świecącej etlingery wyniosłej.
 torchlight.message.crops.tracked=§7Zapamiętane rosnące etlingery wyniosłe: %s. Zaświecą, gdy dojrzeją.

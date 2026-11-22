@@ -8,5 +8,5 @@ torchlight.message.sweep.empty=§7Busca concluída: nenhuma plantocha encontrada
 torchlight.message.setup.complete=§aConfiguração inicial concluída. §fPlantochas que agora brilham: %s.
 torchlight.message.setup.empty=§7Configuração inicial concluída: nenhuma plantocha encontrada por perto.
 pack.name=Torchlight — Pacote de recursos
-pack.description=Pacote de recursos de Torchlight: modelo, textura e textos da plantocha luminosa.
+pack.description=v1.0.0 · Pacote de recursos de Torchlight: modelo, textura e textos da plantocha luminosa.
 torchlight.message.crops.tracked=§7Plantochas em crescimento registradas: %s. Vão brilhar quando amadurecerem.

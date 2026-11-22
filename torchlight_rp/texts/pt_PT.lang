@@ -8,5 +8,5 @@ torchlight.message.sweep.empty=§7Pesquisa concluída: não há Flores-de-Tocha 
 torchlight.message.setup.complete=§aConfiguração inicial concluída. §fFlores-de-Tocha que passaram a brilhar: %s.
 torchlight.message.setup.empty=§7Configuração inicial concluída: não há Flores-de-Tocha por perto.
 pack.name=Torchlight — Pack de Recursos
-pack.description=Pack de recursos do Torchlight: modelo, textura e textos da Flor-de-Tocha luminosa.
+pack.description=v1.0.0 · Pack de recursos do Torchlight: modelo, textura e textos da Flor-de-Tocha luminosa.
 torchlight.message.crops.tracked=§7Flores-de-Tocha em crescimento registadas: %s. Vão brilhar quando amadurecerem.
