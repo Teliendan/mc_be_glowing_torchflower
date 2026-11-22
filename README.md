@@ -1,42 +1,58 @@
-# Glowing Torchflower
+# Torchlight for Minecraft Bedrock
 
-Bedrock add-on that makes the torchflower emit light (level 14, like a torch), as if its bloom
-were an actual flame.
+Torchflowers glow with light level 14, as bright as a torch, as if their bloom were a real flame. Everything else about the flower stays vanilla.
 
-Vanilla blocks are hardcoded and cannot be given light, so the placed flower is swapped for a
-visually identical custom block (`torchlight:torchflower`) that glows. Everything else stays
-vanilla: the item, dye, suspicious stew, sniffer drops and trading are untouched, and breaking
-the glowing flower drops a normal torchflower.
+> **Status: Not released yet.** The first test version will appear on the Releases page. Download: [Releases page](https://github.com/Teliendan/mc_be_torchlight/releases).
 
-- Placing a torchflower: it glows at once.
-- Planting torchflower seeds: the crop grows as normal and the mature flower glows.
-- Flowers already in the world: converted once, automatically, around you the first time you
-  spawn in with the add-on. Far-away flowers, or crops planted by farmers, are converted by
-  running `/scriptevent torchlight:sweep` nearby (radius 32 blocks, 16 up and down).
-- Flowers keep vanilla support rules: they pop when their soil is removed or moved.
+## Features
 
-Built and tested against Bedrock 1.26.52 (Script API 2.8.0).
+- **Placing:** a torchflower you place glows at once.
+- **Growing:** torchflower seeds grow as normal, and the mature flower glows.
+- **Flowers already in your world:** the first time you join a world with the add-on, it lights the torchflowers around you once, automatically.
+- **Sweep:** to light flowers farther away, stand near them and run the chat command `/scriptevent torchlight:sweep`. It covers 32 blocks around you, and 16 up and down.
+- **Still a torchflower:** breaking a glowing flower drops a normal torchflower. Dye, suspicious stew, composting, sniffer drops and trading stay vanilla.
+- **Vanilla rules:** the flower grows on the same soils as before, pops when its soil is removed or moved by a piston, pops in water and burns in lava.
+- **Languages:** English, Czech, German, French, Polish, Spanish (Spain and Mexico) and Portuguese (Portugal and Brazil). The translations are AI drafts; corrections are welcome.
 
-Packs: `torchlight_bp/` + `torchlight_rp/`. Deploy with `.\mods deploy torchlight` from the workspace root.
-Download the add-on from the repo's GitHub Releases page, https://github.com/Teliendan/mc_be_torchlight/releases, or build it locally with `.\mods package torchlight` from the workspace root.
-Design, support rules and in-game checks: [docs/VANILLA_PARITY.md](docs/VANILLA_PARITY.md),
-[docs/SUPPORT_AND_PISTONS.md](docs/SUPPORT_AND_PISTONS.md). Tests: `.\mods verify torchlight`.
+## Install
 
-## Known limitations
+1. Download the `.mcaddon` from the [Releases page](https://github.com/Teliendan/mc_be_torchlight/releases) once the first version is out.
+2. Open the file with Minecraft; it imports both packs.
+3. In the world settings, turn on the Torchlight **behavior pack** (its resource pack comes with it). New and existing worlds both work.
 
-- Normal potting uses the retained vanilla torchflower item and leaves a native potted plant;
-  this pack does not make that pot glow. The separately obtained custom block item has no
-  pot marker. Stable custom pot support exists; see the [parity notes](docs/VANILLA_PARITY.md)
-  for the distinction and pending game checks.
-- Migration on first load only sweeps a volume around the spawning player; distant bases need a
-  manual `/scriptevent torchlight:sweep` run nearby.
-- Torchflowers planted by vanilla farmers (only possible if a player gave them seeds) stay unlit
-  until `/scriptevent torchlight:sweep` is run nearby. The one-time setup does not rerun on update.
+Requirements: tested on Minecraft Bedrock 1.26.63. No experimental toggles are needed. It works on its own and needs none of my other add-ons.
 
-## Localization
+## Known issues
 
-Nine locales use a mod-scoped contextual catalog. See [the localization notes](docs/LOCALIZATION.md) before adding or changing player-facing text.
+- A torchflower in a flower pot does not glow.
+- The first-time setup lights only the flowers around you. Flowers in distant bases stay unlit until you run the sweep near them.
+- If a farmer villager plants torchflower seeds (only possible when a player gives them seeds), the grown flower stays unlit until you run the sweep nearby.
+- Bees do not take nectar from a glowing torchflower.
+- On a large torchflower farm, a grown crop can take a few seconds to start glowing.
+
+## Feedback
+
+Found a bug or have an idea? Tell me through the [report form](https://teliendan.com/contact/?utm_source=github&utm_medium=referral&utm_campaign=profile&utm_content=readme#report).
+
+## Credits
+
+Made by [Teliendan](https://teliendan.com/?utm_source=github&utm_medium=referral&utm_campaign=profile&utm_content=readme).
+
+- Code written with AI coding agents, directed and tested by Teliendan.
+- The flower's texture is Minecraft's own torchflower sprite.
+
+## Disclaimer
+
+Unofficial add-on for Minecraft. Not affiliated with or endorsed by Mojang Studios or Microsoft. "Minecraft" is a trademark of Mojang Studios / Microsoft. Anything derived from vanilla Minecraft files remains Mojang's.
+
+## Licence
+
+See [LICENSE.md](LICENSE.md).
+
+## For developers
+
+How the glowing flower works, pack layout, tests and design notes: [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md).
 
 ## What's new
 
-See [CHANGELOG.md](CHANGELOG.md) and the [Releases page](https://github.com/Teliendan/mc_be_torchlight/releases).
+The changelog starts with the first release; see the [Releases page](https://github.com/Teliendan/mc_be_torchlight/releases).
