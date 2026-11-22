@@ -1,6 +1,6 @@
 # Glowing Torchflower: development
 
-Folder and repository: `glowing_torchflower`. Pack folders, the namespace and the sweep command still use the old working name `torchlight`.
+Folder: `glowing_torchflower` (repository `mc_be_glowing_torchflower`); wiki and site id: `glowing-torchflower`. Pack folders, the namespace and the sweep command still use the old working name `torchlight`.
 
 - Vanilla blocks are hardcoded and cannot be given light, so the placed flower is swapped for a
   visually identical custom block `torchlight:torchflower` (light 14). The item, loot, dye, stew,
