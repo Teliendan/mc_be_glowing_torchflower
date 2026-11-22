@@ -28,8 +28,8 @@
 
             "minecraft:collision_box": false,
             "minecraft:selection_box": {
-                "origin": [-4, 0, -4],
-                "size": [8, 14, 8]
+                "origin": [-6, 0, -6],
+                "size": [12, 14, 12]
             },
             "minecraft:random_offset": {
                 "x": { "range": { "min": -4, "max": 4 }, "steps": 16 },
