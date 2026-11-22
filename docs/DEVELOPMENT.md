@@ -1,4 +1,6 @@
-# Torchlight: development
+# Glowing Torchflower: development
+
+Folder, repository and namespace still use the old working name `torchlight`.
 
 - Vanilla blocks are hardcoded and cannot be given light, so the placed flower is swapped for a
   visually identical custom block `torchlight:torchflower` (light 14). The item, loot, dye, stew,

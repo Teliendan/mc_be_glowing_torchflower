@@ -17,7 +17,7 @@
       "kind": "behavior",
       "entries": {
         "pack.name": {
-          "source": "Torchlight — Behavior Pack",
+          "source": "Glowing Torchflower — Behavior Pack",
           "context": {
             "meaning": "Pack title or description for torchlight_bp. BP means behavior pack; RP means resource pack. Keep mod brands unchanged.",
             "location": "torchlight_bp: pack selection screen",
@@ -29,49 +29,49 @@
           "placeholders": [],
           "translations": {
             "cs_CZ": {
-              "text": "Torchlight — Balíček chování",
-              "based_on": "3e61d98ea988759fba7eb358bfd8afcd916d78c63d85a87d352d4cb2cdcb5f4a",
+              "text": "Svítící zázvor okrasný — Balíček chování",
+              "based_on": "3f4265b326bfbda2c2cd9bcc5a3e992ee7f212e1d516bed0f5e39b0986431795",
               "status": "ai-draft"
             },
             "es_ES": {
-              "text": "Torchlight — Pack de comportamientos",
-              "based_on": "3e61d98ea988759fba7eb358bfd8afcd916d78c63d85a87d352d4cb2cdcb5f4a",
+              "text": "Bastón de emperador luminoso — Pack de comportamientos",
+              "based_on": "3f4265b326bfbda2c2cd9bcc5a3e992ee7f212e1d516bed0f5e39b0986431795",
               "status": "ai-draft"
             },
             "es_MX": {
-              "text": "Torchlight — Pack de comportamiento",
-              "based_on": "3e61d98ea988759fba7eb358bfd8afcd916d78c63d85a87d352d4cb2cdcb5f4a",
+              "text": "Anflorcha luminosa — Pack de comportamiento",
+              "based_on": "3f4265b326bfbda2c2cd9bcc5a3e992ee7f212e1d516bed0f5e39b0986431795",
               "status": "ai-draft"
             },
             "pt_PT": {
-              "text": "Torchlight — Pack de Comportamento",
-              "based_on": "3e61d98ea988759fba7eb358bfd8afcd916d78c63d85a87d352d4cb2cdcb5f4a",
+              "text": "Flor-de-Tocha Luminosa — Pack de Comportamento",
+              "based_on": "3f4265b326bfbda2c2cd9bcc5a3e992ee7f212e1d516bed0f5e39b0986431795",
               "status": "ai-draft"
             },
             "pt_BR": {
-              "text": "Torchlight — Pacote de comportamento",
-              "based_on": "3e61d98ea988759fba7eb358bfd8afcd916d78c63d85a87d352d4cb2cdcb5f4a",
+              "text": "Plantocha luminosa — Pacote de comportamento",
+              "based_on": "3f4265b326bfbda2c2cd9bcc5a3e992ee7f212e1d516bed0f5e39b0986431795",
               "status": "ai-draft"
             },
             "de_DE": {
-              "text": "Torchlight — Verhaltenspaket",
-              "based_on": "3e61d98ea988759fba7eb358bfd8afcd916d78c63d85a87d352d4cb2cdcb5f4a",
+              "text": "Leuchtende Fackelblume — Verhaltenspaket",
+              "based_on": "3f4265b326bfbda2c2cd9bcc5a3e992ee7f212e1d516bed0f5e39b0986431795",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "Torchlight — Pack de comportement",
-              "based_on": "3e61d98ea988759fba7eb358bfd8afcd916d78c63d85a87d352d4cb2cdcb5f4a",
+              "text": "Torche-fleur lumineuse — Pack de comportement",
+              "based_on": "3f4265b326bfbda2c2cd9bcc5a3e992ee7f212e1d516bed0f5e39b0986431795",
               "status": "ai-draft"
             },
             "pl_PL": {
-              "text": "Torchlight — Paczka zachowań",
-              "based_on": "3e61d98ea988759fba7eb358bfd8afcd916d78c63d85a87d352d4cb2cdcb5f4a",
+              "text": "Świecąca etlingera wyniosła — Paczka zachowań",
+              "based_on": "3f4265b326bfbda2c2cd9bcc5a3e992ee7f212e1d516bed0f5e39b0986431795",
               "status": "ai-draft"
             }
           }
         },
         "pack.description": {
-          "source": "Torchlight behavior pack: makes torchflowers emit light at level 14.",
+          "source": "Glowing Torchflower behavior pack: makes torchflowers emit light at level 14.",
           "context": {
             "meaning": "Pack title or description for torchlight_bp. BP means behavior pack; RP means resource pack. Keep mod brands unchanged.",
             "location": "torchlight_bp: pack selection screen",
@@ -83,43 +83,43 @@
           "placeholders": [],
           "translations": {
             "cs_CZ": {
-              "text": "Balíček chování Torchlight: zázvor okrasný vydává světlo úrovně 14.",
-              "based_on": "43cf80cde293220192a31c3de718eb6e661a165fe55a99588b62b6f966c47df2",
+              "text": "Svítící zázvor okrasný – balíček chování: zázvor okrasný vydává světlo úrovně 14.",
+              "based_on": "051f7d7f8d0bbcdd474cf12063bddd8bc15c2b904220ae75b81c8ccbf3a3ecc9",
               "status": "ai-draft"
             },
             "es_ES": {
-              "text": "Pack de comportamientos de Torchlight: hace que los bastones de emperador emitan luz de nivel 14.",
-              "based_on": "43cf80cde293220192a31c3de718eb6e661a165fe55a99588b62b6f966c47df2",
+              "text": "Bastón de emperador luminoso – pack de comportamientos: hace que los bastones de emperador emitan luz de nivel 14.",
+              "based_on": "051f7d7f8d0bbcdd474cf12063bddd8bc15c2b904220ae75b81c8ccbf3a3ecc9",
               "status": "ai-draft"
             },
             "es_MX": {
-              "text": "Pack de comportamiento de Torchlight: las anflorchas emiten luz de nivel 14.",
-              "based_on": "43cf80cde293220192a31c3de718eb6e661a165fe55a99588b62b6f966c47df2",
+              "text": "Anflorcha luminosa – pack de comportamiento: las anflorchas emiten luz de nivel 14.",
+              "based_on": "051f7d7f8d0bbcdd474cf12063bddd8bc15c2b904220ae75b81c8ccbf3a3ecc9",
               "status": "ai-draft"
             },
             "pt_PT": {
-              "text": "Pack de comportamento do Torchlight: as Flores-de-Tocha passam a emitir luz de nível 14.",
-              "based_on": "43cf80cde293220192a31c3de718eb6e661a165fe55a99588b62b6f966c47df2",
+              "text": "Flor-de-Tocha Luminosa – pack de comportamento: as Flores-de-Tocha passam a emitir luz de nível 14.",
+              "based_on": "051f7d7f8d0bbcdd474cf12063bddd8bc15c2b904220ae75b81c8ccbf3a3ecc9",
               "status": "ai-draft"
             },
             "pt_BR": {
-              "text": "Pacote de comportamento de Torchlight: faz as plantochas brilharem com luz de nível 14.",
-              "based_on": "43cf80cde293220192a31c3de718eb6e661a165fe55a99588b62b6f966c47df2",
+              "text": "Plantocha luminosa – pacote de comportamento: faz as plantochas brilharem com luz de nível 14.",
+              "based_on": "051f7d7f8d0bbcdd474cf12063bddd8bc15c2b904220ae75b81c8ccbf3a3ecc9",
               "status": "ai-draft"
             },
             "de_DE": {
-              "text": "Verhaltenspaket für Torchlight: Fackelblumen leuchten mit Lichtstufe 14.",
-              "based_on": "43cf80cde293220192a31c3de718eb6e661a165fe55a99588b62b6f966c47df2",
+              "text": "Leuchtende Fackelblume – Verhaltenspaket: Fackelblumen leuchten mit Lichtstufe 14.",
+              "based_on": "051f7d7f8d0bbcdd474cf12063bddd8bc15c2b904220ae75b81c8ccbf3a3ecc9",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "Pack de comportement de Torchlight : les torches-fleurs émettent une lumière de niveau 14.",
-              "based_on": "43cf80cde293220192a31c3de718eb6e661a165fe55a99588b62b6f966c47df2",
+              "text": "Torche-fleur lumineuse – pack de comportement : les torches-fleurs émettent une lumière de niveau 14.",
+              "based_on": "051f7d7f8d0bbcdd474cf12063bddd8bc15c2b904220ae75b81c8ccbf3a3ecc9",
               "status": "ai-draft"
             },
             "pl_PL": {
-              "text": "Paczka zachowań Torchlight: etlingery wyniosłe dają światło o poziomie 14.",
-              "based_on": "43cf80cde293220192a31c3de718eb6e661a165fe55a99588b62b6f966c47df2",
+              "text": "Świecąca etlingera wyniosła – paczka zachowań: etlingery wyniosłe dają światło o poziomie 14.",
+              "based_on": "051f7d7f8d0bbcdd474cf12063bddd8bc15c2b904220ae75b81c8ccbf3a3ecc9",
               "status": "ai-draft"
             }
           }
@@ -587,7 +587,7 @@
           }
         },
         "pack.name": {
-          "source": "Torchlight — Resource Pack",
+          "source": "Glowing Torchflower — Resource Pack",
           "context": {
             "meaning": "Pack title or description for torchlight_rp. BP means behavior pack; RP means resource pack. Keep mod brands unchanged.",
             "location": "torchlight_rp: pack selection screen",
@@ -599,49 +599,49 @@
           "placeholders": [],
           "translations": {
             "cs_CZ": {
-              "text": "Torchlight — Balíček zdrojů",
-              "based_on": "440215b55457fc247c5f15b574635f886a39425679f55fac38bd2bd1898cc0fb",
+              "text": "Svítící zázvor okrasný — Balíček zdrojů",
+              "based_on": "25060d74fd0beb3cdcfd762b4da67bf875ffac2cbee1cde0821fc1f9c05d68cf",
               "status": "ai-draft"
             },
             "es_ES": {
-              "text": "Torchlight — Paquete de recursos",
-              "based_on": "440215b55457fc247c5f15b574635f886a39425679f55fac38bd2bd1898cc0fb",
+              "text": "Bastón de emperador luminoso — Paquete de recursos",
+              "based_on": "25060d74fd0beb3cdcfd762b4da67bf875ffac2cbee1cde0821fc1f9c05d68cf",
               "status": "ai-draft"
             },
             "es_MX": {
-              "text": "Torchlight — Pack de recursos",
-              "based_on": "440215b55457fc247c5f15b574635f886a39425679f55fac38bd2bd1898cc0fb",
+              "text": "Anflorcha luminosa — Pack de recursos",
+              "based_on": "25060d74fd0beb3cdcfd762b4da67bf875ffac2cbee1cde0821fc1f9c05d68cf",
               "status": "ai-draft"
             },
             "pt_PT": {
-              "text": "Torchlight — Pack de Recursos",
-              "based_on": "440215b55457fc247c5f15b574635f886a39425679f55fac38bd2bd1898cc0fb",
+              "text": "Flor-de-Tocha Luminosa — Pack de Recursos",
+              "based_on": "25060d74fd0beb3cdcfd762b4da67bf875ffac2cbee1cde0821fc1f9c05d68cf",
               "status": "ai-draft"
             },
             "pt_BR": {
-              "text": "Torchlight — Pacote de recursos",
-              "based_on": "440215b55457fc247c5f15b574635f886a39425679f55fac38bd2bd1898cc0fb",
+              "text": "Plantocha luminosa — Pacote de recursos",
+              "based_on": "25060d74fd0beb3cdcfd762b4da67bf875ffac2cbee1cde0821fc1f9c05d68cf",
               "status": "ai-draft"
             },
             "de_DE": {
-              "text": "Torchlight — Ressourcenpaket",
-              "based_on": "440215b55457fc247c5f15b574635f886a39425679f55fac38bd2bd1898cc0fb",
+              "text": "Leuchtende Fackelblume — Ressourcenpaket",
+              "based_on": "25060d74fd0beb3cdcfd762b4da67bf875ffac2cbee1cde0821fc1f9c05d68cf",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "Torchlight — Pack de ressources",
-              "based_on": "440215b55457fc247c5f15b574635f886a39425679f55fac38bd2bd1898cc0fb",
+              "text": "Torche-fleur lumineuse — Pack de ressources",
+              "based_on": "25060d74fd0beb3cdcfd762b4da67bf875ffac2cbee1cde0821fc1f9c05d68cf",
               "status": "ai-draft"
             },
             "pl_PL": {
-              "text": "Torchlight — Paczka zasobów",
-              "based_on": "440215b55457fc247c5f15b574635f886a39425679f55fac38bd2bd1898cc0fb",
+              "text": "Świecąca etlingera wyniosła — Paczka zasobów",
+              "based_on": "25060d74fd0beb3cdcfd762b4da67bf875ffac2cbee1cde0821fc1f9c05d68cf",
               "status": "ai-draft"
             }
           }
         },
         "pack.description": {
-          "source": "Torchlight resource pack: glowing torchflower model, texture and text.",
+          "source": "Glowing Torchflower resource pack: glowing torchflower model, texture and text.",
           "context": {
             "meaning": "Pack title or description for torchlight_rp. BP means behavior pack; RP means resource pack. Keep mod brands unchanged.",
             "location": "torchlight_rp: pack selection screen",
@@ -653,43 +653,43 @@
           "placeholders": [],
           "translations": {
             "cs_CZ": {
-              "text": "Balíček zdrojů Torchlight: model, textura a texty svítícího zázvoru okrasného.",
-              "based_on": "b2cc2530c8ccde097efa11cce41958b8ec0d1a41ff40e16db7caa7bfa31d909c",
+              "text": "Svítící zázvor okrasný – balíček zdrojů: model, textura a texty svítícího zázvoru okrasného.",
+              "based_on": "9a830104315b53f04b170041b113b12341c52084c0a2c47a77e3cb3f0547117a",
               "status": "ai-draft"
             },
             "es_ES": {
-              "text": "Paquete de recursos de Torchlight: modelo, textura y textos del bastón de emperador luminoso.",
-              "based_on": "b2cc2530c8ccde097efa11cce41958b8ec0d1a41ff40e16db7caa7bfa31d909c",
+              "text": "Bastón de emperador luminoso – paquete de recursos: modelo, textura y textos del bastón de emperador luminoso.",
+              "based_on": "9a830104315b53f04b170041b113b12341c52084c0a2c47a77e3cb3f0547117a",
               "status": "ai-draft"
             },
             "es_MX": {
-              "text": "Pack de recursos de Torchlight: modelo, textura y textos de la anflorcha luminosa.",
-              "based_on": "b2cc2530c8ccde097efa11cce41958b8ec0d1a41ff40e16db7caa7bfa31d909c",
+              "text": "Anflorcha luminosa – pack de recursos: modelo, textura y textos de la anflorcha luminosa.",
+              "based_on": "9a830104315b53f04b170041b113b12341c52084c0a2c47a77e3cb3f0547117a",
               "status": "ai-draft"
             },
             "pt_PT": {
-              "text": "Pack de recursos do Torchlight: modelo, textura e textos da Flor-de-Tocha luminosa.",
-              "based_on": "b2cc2530c8ccde097efa11cce41958b8ec0d1a41ff40e16db7caa7bfa31d909c",
+              "text": "Flor-de-Tocha Luminosa – pack de recursos: modelo, textura e textos da Flor-de-Tocha luminosa.",
+              "based_on": "9a830104315b53f04b170041b113b12341c52084c0a2c47a77e3cb3f0547117a",
               "status": "ai-draft"
             },
             "pt_BR": {
-              "text": "Pacote de recursos de Torchlight: modelo, textura e textos da plantocha luminosa.",
-              "based_on": "b2cc2530c8ccde097efa11cce41958b8ec0d1a41ff40e16db7caa7bfa31d909c",
+              "text": "Plantocha luminosa – pacote de recursos: modelo, textura e textos da plantocha luminosa.",
+              "based_on": "9a830104315b53f04b170041b113b12341c52084c0a2c47a77e3cb3f0547117a",
               "status": "ai-draft"
             },
             "de_DE": {
-              "text": "Ressourcenpaket für Torchlight: Modell, Textur und Texte der leuchtenden Fackelblume.",
-              "based_on": "b2cc2530c8ccde097efa11cce41958b8ec0d1a41ff40e16db7caa7bfa31d909c",
+              "text": "Leuchtende Fackelblume – Ressourcenpaket: Modell, Textur und Texte der leuchtenden Fackelblume.",
+              "based_on": "9a830104315b53f04b170041b113b12341c52084c0a2c47a77e3cb3f0547117a",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "Pack de ressources de Torchlight : modèle, texture et textes de la torche-fleur lumineuse.",
-              "based_on": "b2cc2530c8ccde097efa11cce41958b8ec0d1a41ff40e16db7caa7bfa31d909c",
+              "text": "Torche-fleur lumineuse – pack de ressources : modèle, texture et textes de la torche-fleur lumineuse.",
+              "based_on": "9a830104315b53f04b170041b113b12341c52084c0a2c47a77e3cb3f0547117a",
               "status": "ai-draft"
             },
             "pl_PL": {
-              "text": "Paczka zasobów Torchlight: model, tekstura i teksty świecącej etlingery wyniosłej.",
-              "based_on": "b2cc2530c8ccde097efa11cce41958b8ec0d1a41ff40e16db7caa7bfa31d909c",
+              "text": "Świecąca etlingera wyniosła – paczka zasobów: model, tekstura i teksty świecącej etlingery wyniosłej.",
+              "based_on": "9a830104315b53f04b170041b113b12341c52084c0a2c47a77e3cb3f0547117a",
               "status": "ai-draft"
             }
           }

@@ -1,4 +1,4 @@
-# Torchlight for Minecraft Bedrock
+# Glowing Torchflower for Minecraft Bedrock
 
 Torchflowers glow with light level 14, as bright as a torch, as if their bloom were a real flame. Everything else about the flower stays vanilla.
 
@@ -17,8 +17,10 @@ Torchflowers glow with light level 14, as bright as a torch, as if their bloom w
 ## Install
 
 1. Download the `.mcaddon` from the [Releases page](https://github.com/Teliendan/mc_be_torchlight/releases) once the first version is out.
-2. Open the file with Minecraft; it imports both packs.
-3. In the world settings, turn on the Torchlight **behavior pack** (its resource pack comes with it). New and existing worlds both work.
+2. Open the file with Minecraft on Windows, Android or iPhone/iPad; it imports both packs.
+3. In the world settings, turn on the Glowing Torchflower **behavior pack** (its resource pack comes with it). New and existing worlds both work.
+
+Xbox, PlayStation and Switch can't import add-on files directly, but console players can join a world that already has it.
 
 Requirements: tested on Minecraft Bedrock 1.26.63. No experimental toggles are needed. It works on its own and needs none of my other add-ons.
 
