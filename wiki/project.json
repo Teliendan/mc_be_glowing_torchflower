@@ -32,5 +32,12 @@
       "featureId": "torchlight:torchflower"
     }
   ],
-  "ruleValues": []
+  "ruleValues": [],
+  "displayNameExceptions": [
+    {
+      "featureId": "torchlight:torchflower",
+      "inGameName": "Torchflower",
+      "reason": "Intentional: the glowing block keeps the vanilla Torchflower name in game so it reads as the same flower; the wiki names the feature after the mod, Glowing Torchflower."
+    }
+  ]
 }
