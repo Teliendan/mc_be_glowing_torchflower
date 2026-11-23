@@ -12,6 +12,7 @@ Torchflowers glow with light level 14, as bright as a torch, as if their bloom w
 - **Sweep:** to light flowers farther away, stand near them and run the chat command `/scriptevent torchlight:sweep`. It covers 32 blocks around you, and 16 up and down.
 - **Still a torchflower:** breaking a glowing flower drops a normal torchflower. Dye, suspicious stew, composting, sniffer drops and trading stay vanilla.
 - **Vanilla rules:** the flower grows on the same soils as before, pops when its soil is removed or moved by a piston, pops in water and burns in lava.
+- **Vibrant Visuals:** with Vibrant Visuals on, the flame-coloured petals of the glowing torchflower shine like a torch.
 - **Languages:** English, Czech, German, French, Polish, Spanish (Spain and Mexico) and Portuguese (Portugal and Brazil). The translations are AI drafts; corrections are welcome.
 
 ## Install

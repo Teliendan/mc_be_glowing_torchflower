@@ -21,3 +21,11 @@ Folder: `glowing_torchflower` (repository `mc_be_glowing_torchflower`); wiki and
   [TODO.md](TODO.md).
 - Localization: nine locales use a mod-scoped contextual catalog. Read
   [LOCALIZATION.md](LOCALIZATION.md) before adding or changing player-facing text.
+
+## PBR (Vibrant Visuals)
+
+`torchflower.texture_set.json` and `torchflower_mers.tga` (in `torchlight_rp/textures/blocks/`) are generated from
+`tools/pbr_spec.json`: the plant like vanilla torchflower, the flame-coloured petals also emissive like `torch_on`
+(the block gives light 14). Rebuild after any change to the colour texture:
+`python -I .claude/skills/bedrock-art/scripts/pbr_mers.py build mods/glowing_torchflower/tools/pbr_spec.json`
+(from the workspace root); check with the same command plus `--check`.

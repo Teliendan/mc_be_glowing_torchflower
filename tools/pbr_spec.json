@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "rp": "torchlight_rp",
+  "textures": {
+    "blocks/torchflower": {
+      "light": 14,
+      "regions": [
+        { "select": {"hue": [330, 50], "sat_min": 0.5, "lum": [110, 255]},
+          "like": "blocks/torchflower", "like_select": {"hue": [330, 50], "sat_min": 0.5},
+          "emissive": {"like": "blocks/torch_on", "like_select": "mers:E>0"} },
+        { "select": "rest", "like": "blocks/torchflower" }
+      ]
+    }
+  }
+}
